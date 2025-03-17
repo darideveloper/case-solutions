@@ -34,7 +34,7 @@ const slideData = [
   },
 ]
 
-export default function HeroSlider() {
+export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const totalSlides = slideData.length
 

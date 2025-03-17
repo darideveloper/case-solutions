@@ -12,13 +12,15 @@ const geistMono = Geist_Mono({
 });
 
 // Components
-import Hero from "@/components/layout/hero";
+import Hero from "@/components/layout/Hero";
+import Features from "@/components/layout/Features";
 
 
 export default function Home() {
   return (
     <>
       <Hero/>
+      <Features/>
     </>
   );
 }
