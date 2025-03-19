@@ -40,27 +40,27 @@ const Navbar = () => {
       </div>
       <div className="flex justify-center mx-auto w-[65%] mt-[-5px]">
         <div className="hidden md:flex w-[90%] justify-between mt-[-50px]">
-          <a
+          <Link
             href="#"
             className="text-primary font-bold text-lg relative active-nav"
           >
             Inicio
-          </a>
-          <a href="#" className="text-primary font-bold text-lg relative">
+          </Link>
+          <Link href="#" className="text-primary font-bold text-lg relative">
             Quiénes somos
-          </a>
-          <a href="#" className="text-primary font-bold text-lg relative">
+          </Link>
+          <Link href="#" className="text-primary font-bold text-lg relative">
             Servicios
-          </a>
-          <a href="#" className="text-primary font-bold text-lg relative">
+          </Link>
+          <Link href="#" className="text-primary font-bold text-lg relative">
             Productos
-          </a>
-          <a href="#" className="text-primary font-bold text-lg relative">
+          </Link>
+          <Link href="#" className="text-primary font-bold text-lg relative">
             Casos de éxito
-          </a>
-          <a href="#" className="text-primary font-bold text-lg relative">
+          </Link>
+          <Link href="#" className="text-primary font-bold text-lg relative">
             Contacto
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
