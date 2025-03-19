@@ -19,6 +19,9 @@ const config = {
     },
     extend: {
       colors: {
+        primary: "#2B2F67",
+        accent: "#8F092F",
+        lightGray: "#C9C9C9",
         white: "#ffffff",
         blue: "#2b2f67",
         orange: "#ff7a00",
@@ -42,7 +45,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
 
-module.exports = config
-
+module.exports = config;

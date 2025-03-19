@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --geist-primary: #2b2f67;
+  --geist-secondary: #8f092f;
+  --geist-accent: #8f092f;
 }
 
 @theme inline {
@@ -10,6 +13,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary: var(--geist-primary);
+  --color-secondary: var(--geist-secondary);
+  --color-accent: var(--geist-accent);
 }
 
 @media (prefers-color-scheme: dark) {
