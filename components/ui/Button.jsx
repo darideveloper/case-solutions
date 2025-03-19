@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Button({
   href,
   children,
-  style,
+  className = "",
   onClick,
   type = "button",
 }) {
@@ -15,7 +15,7 @@ export default function Button({
     return (
       <button
         type="button"
-        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${style}`}
+        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${className}`}
       >
         {children}
       </button>
@@ -26,7 +26,7 @@ export default function Button({
     return (
       <Link
         href={href}
-        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${style}`}
+        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${className}`}
       >
         {children}
 
@@ -39,7 +39,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${style}`}
+      className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${className}`}
     >
       {children}
       <Image src="/next.svg" alt="Next.js Logo" height={25} width={25} />

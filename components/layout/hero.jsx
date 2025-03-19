@@ -18,19 +18,20 @@ const slideData = [
   },
   {
     id: 2,
-    title: "INNOVACIÓN CONSTANTE",
+    title: "Ofrecemos atención personalizada",
+
     subtitle:
-      "Desarrollamos soluciones tecnológicas adaptadas a las necesidades de cada cliente.",
-    buttonText: "Descubrir",
+      "Desarrollamos productos que se adaptan a las necesidades de nuestros clientes.",
+    buttonText: "¡Contáctanos hoy mismo!",
     buttonLink: "/innovation",
     imageUrl: "/images/Hero-slide-2.png",
   },
   {
     id: 3,
-    title: "COMPROMISO TOTAL",
+    title: "Conoce nuestros productos",
     subtitle:
-      "Nuestro equipo trabaja con dedicación para superar sus expectativas.",
-    buttonText: "Nuestro equipo",
+      "Administre sus recursos de una forma práctica.",
+    buttonText: "Ver Productos",
     buttonLink: "/about",
     imageUrl: "/images/Hero-slide-3.png",
   },
@@ -86,7 +87,7 @@ export default function Hero() {
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="container mx-auto px-6 md:px-12">
               <div className="max-w-xl">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 uppercase">
                   {slide.title}
                 </h1>
                 <p className="text-lg md:text-xl text-white mb-8">
@@ -94,7 +95,7 @@ export default function Hero() {
                 </p>
                 <Button
                   href={slide.buttonLink}
-                  style="bg-white text-blue-900 hover:bg-blue-50"
+                  className="bg-white text-blue-900 hover:bg-blue-50"
                 >
                   {slide.buttonText}
                 </Button>
@@ -107,7 +108,7 @@ export default function Hero() {
       {/* Navigation arrows */}
       <Button
         onClick={prevSlide} // Pass onClick for normal button behavior
-        style="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white backdrop-blur-sm transition-colors"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white backdrop-blur-sm transition-colors"
         aria-label="Previous slide"
         type="slider"
       >
@@ -115,7 +116,7 @@ export default function Hero() {
       </Button>
       <Button
         onClick={nextSlide} // Pass onClick for normal button behavior
-        style="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white backdrop-blur-sm transition-colors"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 rounded-full p-2 text-white backdrop-blur-sm transition-colors"
         aria-label="Next slide"
         type="slider"
       >
@@ -125,12 +126,12 @@ export default function Hero() {
       {/* Dots navigation */}
       <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-start container mx-auto px-6 md:px-12 gap-2">
         {slideData.map((_, index) => (
-          <Button
+          <button
             key={index}
             onClick={() => goToSlide(index)} 
-            style={`w-3 h-3 rounded-full transition-all ${
+            className={`w-8 h-2 transition-all ${
               index === currentSlide
-                ? "bg-white w-8"
+                ? "bg-white"
                 : "bg-white/50 hover:bg-white/70"
             }`}
             aria-label={`Go to slide ${index + 1}`}
