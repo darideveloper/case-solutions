@@ -42,6 +42,25 @@ export default function Button({
     );
   }
 
+  if (type === "cta") {
+    return (
+      <button
+        onClick={onClick}
+        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic bg-primary text-white ${className}`}
+      >
+        {children}
+        <span className="ml-2.5">
+          <Image
+            src="/images/box-icon-white.png"
+            alt="button image"
+            height={25}
+            width={25}
+          />
+        </span>
+      </button>
+    );
+  }
+
   // If href is not provided, render a button
   return (
     <button
@@ -52,6 +71,7 @@ export default function Button({
       <Image
         src="/images/box-icon.png"
         alt="button image"
+        className="mr-2"
         height={25}
         width={25}
       />
