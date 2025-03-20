@@ -6,6 +6,8 @@
   --geist-primary: #2b2f67;
   --geist-secondary: #8f092f;
   --geist-accent: #8f092f;
+  --geist-white: #ffffff;
+  --geist-light-gray: #C9C9C9;
 }
 
 @theme inline {
@@ -16,6 +18,8 @@
   --color-primary: var(--geist-primary);
   --color-secondary: var(--geist-secondary);
   --color-accent: var(--geist-accent);
+  --color-white: var(--geist-white);
+  --color-light-gray: var(--geist-light-gray);
 }
 
 @media (prefers-color-scheme: dark) {

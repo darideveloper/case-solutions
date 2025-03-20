@@ -15,7 +15,8 @@ export default function Button({
     return (
       <button
         type="button"
-        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${className}`}
+        onClick={onClick}
+        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic ${className}`}
       >
         {children}
       </button>
@@ -26,11 +27,17 @@ export default function Button({
     return (
       <Link
         href={href}
-        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${className}`}
+        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic ${className}`}
       >
         {children}
 
-        <Image src="/images/box-icon.png" alt="Next.js Logo" height={25} width={25} className="ml-2"/>
+        <Image
+          src="/images/box-icon.png"
+          alt="Next.js Logo"
+          height={25}
+          width={25}
+          className="ml-2"
+        />
       </Link>
     );
   }
@@ -39,10 +46,15 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors ${className}`}
+      className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic ${className}`}
     >
       {children}
-      <Image src="/next.svg" alt="Next.js Logo" height={25} width={25} />
+      <Image
+        src="/images/box-icon.png"
+        alt="button image"
+        height={25}
+        width={25}
+      />
     </button>
   );
 }
