@@ -9,6 +9,7 @@ import Navbar from "@/components/layout/Navbar";
 import SavehrDescripcion from "@/components/layout/SavehrDescripcion";
 import Flipbook from "@/components/layout/Flipbook";
 import ProductShowcase from "@/components/ui/ShowcaseComponent";
+import WaveBreak from "@/components/layout/WaveBreak";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
       <SavehrDescripcion />
       <Flipbook />
       <ProductShowcase/>
+      <WaveBreak/>
+      <ProductShowcase imagePosition="right" className="mt-[-400px]"/>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ProductShowcase = ({
   imagePosition = "left", // 'left' or 'right'
   title = "LOREM IPSUM DOLOR",
@@ -6,12 +8,13 @@ const ProductShowcase = ({
   ctaText = "LEER MÁS",
   imageSrc = "/images/showcase-image.png",
   imageAlt = "Product showcase image",
+  className = "",
 }) => {
   // Determine the order of content based on imagePosition
   const isImageOnRight = imagePosition === "right";
 
   return (
-    <div className="w-full bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className={`w-full py-12 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Content Section */}
@@ -24,20 +27,29 @@ const ProductShowcase = ({
                 {title}
               </h2>
               <p className="text-gray-700 mb-6">{description}</p>
-              <button className="text-indigo-700 font-medium uppercase tracking-wide hover:text-indigo-800 transition-colors">
+              <Link
+                href={"/"}
+                className="text-primary hover:text-secondary hover:font-bold underline hover:decoration-accent font-medium uppercase tracking-wide hover:text-indigo-800 transition-colors"
+              >
                 {ctaText}
-              </button>
+              </Link>
             </div>
           </div>
 
           {/* Image Section */}
-          <div className={`md:w-1/2 ${isImageOnRight ? "order-2" : "order-1"}`}>
-            <div className="bg-indigo-800 rounded-lg p-2 shadow-xl">
+          <div
+            className={`md:w-1/2 relative ${
+              isImageOnRight ? "order-2" : "order-1"
+            }`}
+          >
+            <div className="rounded-lg">
               <img
                 src={imageSrc}
                 alt={imageAlt}
-                className="w-full h-auto rounded object-cover"
+                className="w-full h-auto rounded object-cover shadow-[-15px_-15px_3px_3px_rgba(0,_0,_0,_0.1)]]"
               />
+              {/* Bluish Overlay */}
+              <div className="absolute inset-0 bg-primary/80 rounded"></div>
             </div>
           </div>
         </div>

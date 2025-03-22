@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../ui/Button";
 
-const SavehrDescripcion = () => {
+const SavehrDescripcion = ({ className=''}) => {
   const [isVideoPlaying, setIsVideoPlaying] = React.useState(false);
 
   const handleVideoClick = () => {
@@ -9,7 +9,7 @@ const SavehrDescripcion = () => {
   };
 
   return (
-    <section className="relative bg-white py-12">
+    <section className={`relative bg-white py-12 ${className}`}>
       <div className="max-w-7xl mx-auto p-8 bg-white">
         {/* Main content container */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-4 mt-8">

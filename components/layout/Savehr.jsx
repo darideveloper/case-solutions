@@ -1,9 +1,9 @@
 import Button from "@/components/ui/Button";
 
-export default function Savehr() {
+export default function Savehr({ className='' }) {
   return (
     <section
-      className="relative overflow-hidden bg-white py-[50px]"
+      className={`relative overflow-hidden bg-white py-[50px] ${className}`}
       style={{
         backgroundImage: `url('/images/bg-curve.png')`,
         backgroundSize: "cover",
