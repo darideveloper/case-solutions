@@ -14,6 +14,8 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
+        md: "1024px",
+        lg: "1280px",
         "2xl": "1400px",
       },
     },
@@ -28,6 +30,7 @@ const config = {
         red: "#bc242b",
         geay: "#585958",
       },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

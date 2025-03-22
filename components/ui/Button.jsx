@@ -1,80 +1,75 @@
 // Button.js
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+
 export default function Button({
-  href,
+  href = "",
   children,
   className = "",
   onClick,
-  type = "button",
+  variant = "button",
+  showImage = true, // New prop to control image visibility
+  ...props
 }) {
-  // If href is provided, render a Link
+  // Common button styles
+  const baseStyles =
+    "inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic";
+  const primaryStyles = `${baseStyles} bg-primary text-white`; // Updated for primary variant
 
-  if (type == "slider") {
+  // Common image props
+  const imageProps = {
+    height: 25,
+    width: 25,
+  };
+
+  // If variant is "secondary", render a Link
+  if (variant === "secondary") {
     return (
-      <button
-        type="button"
-        onClick={onClick}
-        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic ${className}`}
-      >
+      <Link {...props} href={href} className={`${baseStyles} ${className}`}>
         {children}
-      </button>
-    );
-  }
-
-  if (href) {
-    return (
-      <Link
-        href={href}
-        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic ${className}`}
-      >
-        {children}
-
-        <Image
-          src="/images/box-icon.png"
-          alt="Next.js Logo"
-          height={25}
-          width={25}
-          className="ml-2"
-        />
+        {showImage && (
+          <Image
+            src="/images/box-icon.png"
+            alt="Next.js Logo"
+            {...imageProps}
+            className="ml-2"
+            
+          />
+        )}
       </Link>
     );
   }
 
-  if (type === "cta") {
+  // If variant is "primary", render a button with primary styles
+  if (variant === "primary") {
     return (
-      <button
-        onClick={onClick}
-        className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic bg-primary text-white ${className}`}
-      >
+      <Link href={href} {...props} className={`${primaryStyles} ${className}`}>
         {children}
-        <span className="ml-2.5">
-          <Image
-            src="/images/box-icon-white.png"
-            alt="button image"
-            height={25}
-            width={25}
-          />
-        </span>
-      </button>
+        {showImage && (
+          <span className="ml-2.5">
+            <Image
+              src="/images/box-icon-white.png"
+              alt="button image"
+              {...imageProps}
+            />
+          </span>
+        )}
+      </Link>
     );
   }
 
-  // If href is not provided, render a button
+  // Default button rendering
   return (
-    <button
-      onClick={onClick}
-      className={`inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic ${className}`}
-    >
+    <button onClick={onClick} {...props} className={`${baseStyles} ${className}`}>
       {children}
-      <Image
-        src="/images/box-icon.png"
-        alt="button image"
-        className="mr-2"
-        height={25}
-        width={25}
-      />
+      {showImage && (
+        <Image
+          src="/images/box-icon.png"
+          alt="button image"
+          {...imageProps}
+          className="ml-2"
+        />
+      )}
     </button>
   );
 }

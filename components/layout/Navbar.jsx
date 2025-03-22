@@ -1,66 +1,104 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
 import Image from "next/image";
-import { Mail, Phone } from "lucide-react";
+import NavLink from "../ui/NavLink";
+import { Menu } from "lucide-react";
+
+const links = [
+  { href: "/", text: "Inicio", active: true },
+  { href: "#", text: "Quiénes somos", active: false },
+  { href: "#", text: "Servicios", active: false },
+  { href: "#", text: "Portafolio", active: false },
+  { href: "#", text: "Contacto", active: false },
+];
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav className="bg-white">
-      <div className="flex flex-row justify-between mx-auto items-center p-4 w-[90%]">
-        <div className="flex flex-row items-center">
-          <Image src="/images/logo.svg" alt="Logo" width={167} height={146} />
-          <h3 className="mt-[-40px] ml-[20px] underline underline-offset-4 text-primary font-bold">
-            La solución tecnológica a la medida de tu negocio
-          </h3>
+    <nav className="max-w-7xl bg-primary mx-auto bg-white">
+      <div className="flex flex-col md:flex-row">
+        <div className="relative flex items-center justify-center py-4 px-4 md:justify-start">
+          {/* Mobile menu button - moved to left */}
+          <button
+            className="absolute left-4 md:hidden focus:outline-none"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            <Menu className="w-6 h-6 text-accent" />
+          </button>
+
+          {/* Logo - centered on mobile */}
+          <Image
+            src="/images/logo.svg"
+            className="mx-auto md:mx-0"
+            alt="Logo"
+            width={150}
+            height={150}
+          />
         </div>
-        <div>
-          <div className="flex flex-col md:flex-row items-center md:items-end gap-4 mt-[-50px]">
-            {/* <!-- Email contact --> */}
-            <div className="flex flex-col items-center md:items-end">
-              <p className="text-accent font-bold">correo@casesolutions.mx</p>
-              <div className="flex items-center gap-2">
-                {/* <!-- Email icon --> */}
-                <Mail className="text-accent" />
-                <p className="text-accent">Mandar un mensaje</p>
+        <div className={`w-full ${menuOpen ? "block" : "hidden"} md:block`}>
+          <div className="flex flex-col md:flex-row md:justify-between p-4 w-full">
+            <div className="slogan-address flex flex-col md:flex-row md:justify-between w-full p-4">
+              <div className="slogan mb-4 md:mb-0">
+                <h3 className="text-primary font-bold underline underline-offset-6 decoration-2 decoration-gray-light">
+                  La solución tecnológica a la medida de tu negocio
+                </h3>
               </div>
-            </div>
-            {/* <!-- Divider --> */}
-            <div className="hidden md:block w-px h-12 bg-accent mx-4"></div>
-            {/* <!-- Phone contact --> */}
-            <div className="flex flex-col items-center md:items-end">
-              <p className="text-accent font-bold">(55) 1107-0478</p>
-              <div className="flex items-center gap-2">
-                {/* <!-- Phone icon --> */}
-                <Phone className="text-accent" />
-                <p className="text-accent">Llámanos</p>
+              <div className="address flex flex-col md:flex-row">
+                <div className="flex gap-2 mb-4 md:mb-0">
+                  <div className="flex flex-col items-start md:items-end">
+                    <p className="text-accent font-bold">
+                      correo@casesolutions.mx
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <Image
+                        src="/images/icons/mail.png"
+                        alt="Email"
+                        width={22}
+                        height={22}
+                        className="mt-1"
+                      />
+                      <p className="text-accent">Mandar un mensaje</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden md:block w-px h-12 bg-accent mx-4"></div>
+                <div className="flex flex-col items-start md:items-center">
+                  <p className="text-accent font-bold text-nowrap">
+                    (55) 1107-0478
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src="/images/icons/phone.png"
+                      alt="Phone"
+                      width={22}
+                      height={22}
+                    />
+                    <p className="text-accent">Llámanos</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="flex justify-center mx-auto w-[65%] mt-[-5px]">
-        <div className="hidden md:flex w-[90%] justify-between mt-[-50px]">
-          <Link
-            href="#"
-            className="text-primary font-bold text-lg relative active-nav"
-          >
-            Inicio
-          </Link>
-          <Link href="#" className="text-primary font-bold text-lg relative">
-            Quiénes somos
-          </Link>
-          <Link href="#" className="text-primary font-bold text-lg relative">
-            Servicios
-          </Link>
-          <Link href="#" className="text-primary font-bold text-lg relative">
-            Productos
-          </Link>
-          <Link href="#" className="text-primary font-bold text-lg relative">
-            Casos de éxito
-          </Link>
-          <Link href="#" className="text-primary font-bold text-lg relative">
-            Contacto
-          </Link>
+          <div>
+            <div className="px-8 max-w-4xl md:mt-[-10px] mb-4">
+              <div className="nav w-full">
+                <ul className="flex flex-col md:flex-row md:justify-between w-full">
+                  {links.map((link, index) => (
+                    <li key={index} className="py-2 md:py-0">
+                      <NavLink active={link.active} href={link.href}>
+                        {link.text}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

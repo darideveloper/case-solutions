@@ -1,12 +1,14 @@
-import Image from "next/image"
-import { fontRegular } from "@/lib/fonts"
+import Image from "next/image";
+import { fontRegular } from "@/lib/fonts";
 
 // Components
-import Hero from "@/components/layout/Hero"
-import Features from "@/components/layout/Features"
-import Savehr from "@/components/layout/Savehr"
-import Navbar from "@/components/layout/Navbar"
-
+import Hero from "@/components/layout/Hero";
+import Features from "@/components/layout/Features";
+import Savehr from "@/components/layout/Savehr";
+import Navbar from "@/components/layout/Navbar";
+import SavehrDescripcion from "@/components/layout/SavehrDescripcion";
+import Flipbook from "@/components/layout/Flipbook";
+import ProductShowcase from "@/components/ui/ShowcaseComponent";
 
 export default function Home() {
   return (
@@ -15,10 +17,13 @@ export default function Home() {
         ${fontRegular.className}
       `}
     >
-      <Navbar/>
+      <Navbar />
       <Hero />
       <Features />
       <Savehr />
+      <SavehrDescripcion />
+      <Flipbook />
+      <ProductShowcase/>
     </div>
-  )
+  );
 }

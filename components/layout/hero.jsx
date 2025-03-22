@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Title from "../ui/Title";
@@ -83,6 +82,7 @@ export default function Hero() {
                   {slide.subtitle}
                 </p>
                 <Button
+                  variant="secondary"
                   href={slide.buttonLink}
                   className="bg-white text-primary hover:bg-white/90"
                 >
