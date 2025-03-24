@@ -10,6 +10,7 @@ import SavehrDescripcion from "@/components/layout/SavehrDescripcion";
 import Flipbook from "@/components/layout/Flipbook";
 import ProductShowcase from "@/components/ui/ShowcaseComponent";
 import WaveBreak from "@/components/layout/WaveBreak";
+import Testimonials from "@/components/layout/Testimonials";
 
 export default function Home() {
   return (
@@ -24,9 +25,10 @@ export default function Home() {
       <Savehr />
       <SavehrDescripcion />
       <Flipbook />
-      <ProductShowcase/>
-      <WaveBreak/>
-      <ProductShowcase imagePosition="right" className="mt-[-400px]"/>
+      <ProductShowcase />
+      <WaveBreak />
+      <ProductShowcase imagePosition="right" className="mt-[-400px]" />
+      <Testimonials />
     </div>
   );
 }

@@ -16,7 +16,7 @@ const ProductShowcase = ({
   return (
     <div className={`w-full py-12 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-16">
           {/* Content Section */}
           <div className={`md:w-1/2 ${isImageOnRight ? "order-1" : "order-2"}`}>
             <div className="max-w-lg">
@@ -42,14 +42,12 @@ const ProductShowcase = ({
               isImageOnRight ? "order-2" : "order-1"
             }`}
           >
-            <div className="rounded-lg">
+            <div className="rounded-lg shadow-[15px_-15px_3px_3px_rgba(0,0,0,0.1)] bg-primary">
               <img
                 src={imageSrc}
                 alt={imageAlt}
-                className="w-full h-auto rounded object-cover shadow-[-15px_-15px_3px_3px_rgba(0,_0,_0,_0.1)]]"
+                className="w-full h-auto rounded object-cover opacity-50"
               />
-              {/* Bluish Overlay */}
-              <div className="absolute inset-0 bg-primary/80 rounded"></div>
             </div>
           </div>
         </div>
