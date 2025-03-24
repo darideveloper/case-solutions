@@ -11,6 +11,8 @@ import Flipbook from "@/components/layout/Flipbook";
 import ProductShowcase from "@/components/ui/ShowcaseComponent";
 import WaveBreak from "@/components/layout/WaveBreak";
 import Testimonials from "@/components/layout/Testimonials";
+import ClientShowcase from "@/components/layout/ClientShowcase";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -29,6 +31,8 @@ export default function Home() {
       <WaveBreak />
       <ProductShowcase imagePosition="right" className="mt-[-400px]" />
       <Testimonials />
+      <ClientShowcase/>
+      <Footer/>
     </div>
   );
 }
