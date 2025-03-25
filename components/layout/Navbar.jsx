@@ -1,22 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import NavLink from "../ui/NavLink";
 import { Menu } from "lucide-react";
+import { useRouter } from "next/router";
 
 const links = [
-  { href: "/", text: "Inicio", active: true },
-  { href: "#", text: "Quiénes somos", active: false },
-  { href: "#", text: "Servicios", active: false },
-  { href: "#", text: "Portafolio", active: false },
-  { href: "#", text: "Contacto", active: false },
+  { href: "/", text: "Inicio" },
+  { href: "/about", text: "Quiénes somos" },
+  { href: "/services", text: "Servicios" },
+  { href: "/products", text: "Productos" },
+  { href: "/testimonials", text: "Casos de éxito" },
+  { href: "/contact", text: "Contacto" },
 ];
 
 const Navbar = () => {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Update active link based on current route
+  useEffect(() => {
+    setActiveLink(router.pathname);
+  }, [router.pathname]);
 
   return (
     <nav className="max-w-7xl bg-primary mx-auto bg-white">
@@ -90,7 +99,10 @@ const Navbar = () => {
                 <ul className="flex flex-col md:flex-row md:justify-between w-full">
                   {links.map((link, index) => (
                     <li key={index} className="py-2 md:py-0">
-                      <NavLink active={link.active} href={link.href}>
+                      <NavLink
+                        active={activeLink === link.href}
+                        href={link.href}
+                      >
                         {link.text}
                       </NavLink>
                     </li>
