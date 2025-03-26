@@ -1,4 +1,6 @@
 import ContactDetails from "@/components/layout/ContactDetails";
+import ContactService from "@/components/layout/ContactService";
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/layout/Hero";
 import Hobelmos from "@/components/layout/Hobelmos";
 import Navbar from "@/components/layout/Navbar";
@@ -15,6 +17,8 @@ export default function Contact() {
         se pondrá en contacto con usted,
       </Hobelmos>
       <ContactDetails />
+      <ContactService />
+      <Footer />
     </div>
   );
 }

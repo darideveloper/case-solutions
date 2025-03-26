@@ -2,7 +2,7 @@ import Button from "../ui/Button";
 
 function ContactDetails() {
   return (
-    <div className="relative p-6 md:p-0 md:max-w-7xl mx-auto flex flex-col gap-x-10 gap-y-32 md:flex-row md:justify-between">
+    <div className="relative p-6 md:p-2 md:max-w-7xl mx-auto flex flex-col gap-x-10 gap-y-32 md:flex-row md:justify-between">
       <div className="text-primary max-w-xl mx-auto">
         <h1 className="mb-9 text-xl font-bold italic md:text-[32px]">
           Disponibles para usted en:
