@@ -62,7 +62,7 @@ const Footer = () => {
             <div className="my-2 flex justify-center md:hidden">
               <img alt="logo" className="h-auto w-31" src="/images/logo.svg" />
             </div>
-            <div className="text-red-custom mb-11 flex flex-col items-center gap-4 text-sm md:w-md">
+            <div className="text-accent mb-11 flex flex-col items-center gap-4 text-sm md:w-md">
               <p className="font-bold text-accent">
                 hamaro@casesolutions.com.mx
               </p>
@@ -78,7 +78,7 @@ const Footer = () => {
                     Llámanos
                   </p>
                 </div>
-                <div className="bg-red-custom w-0.5" />
+                <div className="bg-accent w-0.5" />
                 <div className="text-center">
                   <p className="font-bold text-accent">(55) 1107-0478</p>
                   <p className="mt-3 flex items-center text-accent gap-4">
@@ -102,3 +102,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

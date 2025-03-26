@@ -2,7 +2,7 @@ import Image from "next/image";
 import { fontRegular } from "@/lib/fonts";
 
 // Components
-import Hero from "@/components/layout/Hero";
+import Hero from "@/components/layout/HeroSlider";
 import Features from "@/components/layout/Features";
 import Savehr from "@/components/layout/Savehr";
 import Navbar from "@/components/layout/Navbar";
@@ -13,6 +13,7 @@ import WaveBreak from "@/components/layout/WaveBreak";
 import Testimonials from "@/components/layout/Testimonials";
 import ClientShowcase from "@/components/layout/ClientShowcase";
 import Footer from "@/components/layout/Footer";
+import HeroSlider from "@/components/layout/HeroSlider";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
       `}
     >
       <Navbar />
-      <Hero />
+      <HeroSlider />
       <Features />
       <Savehr />
       <SavehrDescripcion />
@@ -31,8 +32,8 @@ export default function Home() {
       <WaveBreak />
       <ProductShowcase imagePosition="right" className="mt-[-400px]" />
       <Testimonials />
-      <ClientShowcase/>
-      <Footer/>
+      <ClientShowcase />
+      <Footer />
     </div>
   );
 }
