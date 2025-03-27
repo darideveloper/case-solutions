@@ -1,4 +1,5 @@
 import Companies from "@/components/layout/Companies";
+import ContactService from "@/components/layout/ContactService";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/layout/Hero";
 import Hobelmos from "@/components/layout/Hobelmos";
@@ -17,6 +18,7 @@ export default function Stories() {
       </Hobelmos>
       <Companies />
       <DownloadCard />
+      <ContactService />
       <Footer />
     </div>
   );
