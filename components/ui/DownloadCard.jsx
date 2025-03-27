@@ -13,7 +13,7 @@ const DownloadCard = () => {
   ];
 
   return (
-    <div className="relative mx-auto mt-38 flex w-[90%] flex-col-reverse bg-white shadow-xl shadow-[#B8B8B9] lg:flex-row">
+    <div className="relative mx-auto mt-38 flex max-w-7xl flex-col-reverse bg-white shadow-lg shadow-gray md:flex-row lg:flex-row">
       <div className="absolute bottom-0 left-0 w-full md:relative lg:w-1/2">
         <img
           src={`/images/download-card-bg.png`}

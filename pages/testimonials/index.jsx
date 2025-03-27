@@ -1,3 +1,4 @@
+import Companies from "@/components/layout/Companies";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/layout/Hero";
 import Hobelmos from "@/components/layout/Hobelmos";
@@ -14,6 +15,7 @@ export default function Stories() {
         esfuerzo y profesionalismo hemos logrado objetivos importantes, tanto en
         la industria privada como en el gobierno.
       </Hobelmos>
+      <Companies />
       <DownloadCard />
       <Footer />
     </div>
