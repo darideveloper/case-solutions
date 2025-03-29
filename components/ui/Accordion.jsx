@@ -59,7 +59,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto shadow-lg rounded-lg overflow-hidden">
+    <div className="max-w-2xl mx-auto shadow-lg rounded-lg space-y-4 overflow-hidden">
       {accordionData.map((item, index) => (
         <div key={index} className="border-b border-gray">
           <button
@@ -69,7 +69,7 @@ const Accordion = () => {
           >
             <div className="flex items-center space-x-3">
               <item.icon className="w-6 h-6" />
-              <span className="font-semibold">{item.title}</span>
+              <span className="font-bold text-lg uppercase">{item.title}</span>
             </div>
             {openIndex === index ? <ChevronUp /> : <ChevronDown />}
           </button>

@@ -1,7 +1,6 @@
-import { MessageSquare, BarChart3, PieChart, Award } from "lucide-react";
-import TitleText from "../ui/TitleText";
+import TitleText from "@/components/ui/TitleText";
 
-import FeatureCard from "../ui/FeatureCard";
+import FeatureCard from "@/components/ui/FeatureCard";
 
 export default function Features({ className = "" }) {
   const features = [

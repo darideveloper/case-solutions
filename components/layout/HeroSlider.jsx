@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import Title from "../ui/Title";
+import Title from "@/components/ui/Title";
 
 // Sample slide data
 const slideData = [

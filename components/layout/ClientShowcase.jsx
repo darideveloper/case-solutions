@@ -1,6 +1,5 @@
 import React from "react";
-import Title from "../ui/Title";
-import { Flashlight } from "lucide-react";
+import Title from "@/components/ui/Title";
 
 const ClientShowcase = () => {
   const clients = [

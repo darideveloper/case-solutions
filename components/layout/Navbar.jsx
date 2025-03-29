@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import NavLink from "../ui/NavLink";
+import NavLink from "@/components/ui/NavLink";
 import { Menu } from "lucide-react";
 import { useRouter } from "next/router";
 

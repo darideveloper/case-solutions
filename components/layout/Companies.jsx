@@ -1,4 +1,4 @@
-import CompanyCard from "../ui/CompanyCard";
+import CompanyCard from "@/components/ui/CompanyCard";
 
 export default function Companies() {
   const companies = [

@@ -1,4 +1,4 @@
-import Accordion from "../ui/Accordion";
+import Accordion from "@/components/ui/Accordion";
 
 export default function ServiceDropdown() {
   return (

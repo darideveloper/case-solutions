@@ -1,5 +1,5 @@
-import TestimonialCard from "../ui/TestimonialCard";
-import Title from "../ui/Title";
+import TestimonialCard from "@/components/ui/TestimonialCard";
+import Title from "@/components/ui/Title";
 
 const data = [
   {
