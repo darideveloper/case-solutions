@@ -8,68 +8,69 @@ export default function Button({
   className = "",
   onClick,
   variant = "button",
-  showImage = true, // New prop to control image visibility
+  showImage = true,
   ...props
 }) {
-  // Common button styles
+  // Base button styles
   const baseStyles =
-    "inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic";
-  const primaryStyles = `${baseStyles} bg-primary text-white`; // Updated for primary variant
+    "inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic group";
 
-  // Common image props
+  // Style variants
+  const primaryStyles = `${baseStyles} bg-primary text-white`;
+  const secondaryStyles = baseStyles;
+  const defaultStyles = baseStyles;
+
+  // Shared image props
   const imageProps = {
     height: 25,
     width: 25,
+    className:
+      "ml-2 transform transition-transform duration-300 group-hover:scale-125 group-hover:rotate-90",
   };
 
-  // If variant is "secondary", render a Link
+  // Choose image based on variant
+  const imageSrc =
+    variant === "primary"
+      ? "/images/box-icon-white.png"
+      : "/images/box-icon.png";
+
+  // Secondary variant
   if (variant === "secondary") {
     return (
-      <Link {...props} href={href} className={`${baseStyles} ${className}`}>
+      <Link
+        {...props}
+        href={href}
+        className={`${secondaryStyles} ${className}`}
+      >
         {children}
         {showImage && (
-          <Image
-            src="/images/box-icon.png"
-            alt="Next.js Logo"
-            {...imageProps}
-            className="ml-2"
-            
-          />
+          <Image src={imageSrc} alt="button image" {...imageProps} />
         )}
       </Link>
     );
   }
 
-  // If variant is "primary", render a button with primary styles
+  // Primary variant
   if (variant === "primary") {
     return (
       <Link href={href} {...props} className={`${primaryStyles} ${className}`}>
         {children}
         {showImage && (
-          <span className="ml-2.5">
-            <Image
-              src="/images/box-icon-white.png"
-              alt="button image"
-              {...imageProps}
-            />
-          </span>
+          <Image src={imageSrc} alt="button image" {...imageProps} />
         )}
       </Link>
     );
   }
 
-  // Default button rendering
+  // Default button
   return (
-    <button onClick={onClick} {...props} className={`${baseStyles} ${className}`}>
+    <button
+      onClick={onClick}
+      {...props}
+      className={`${defaultStyles} ${className}`}
+    >
       {children}
-      {showImage && (
-        <Image
-          src="/images/box-icon.png"
-          alt="button image"
-          {...imageProps}
-          className="ml-2"
-        />
-      )}
+      {showImage && <Image src={imageSrc} alt="button image" {...imageProps} />}
     </button>
   );
 }

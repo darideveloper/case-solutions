@@ -13,11 +13,10 @@ export default function Savehr({ className='' }) {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10 pb-32 pt-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-            Administre su flota vehicular con{" "}
-            <span className="text-orange relative">
-              SAVEHR
-              <span className="absolute -top-3 -right-3 text-orange">®</span>
+          <h2 className="text-xl md:text-4xl italic font-bold text-primary mb-4 inline-flex">
+            Administre su flota vehicular con 
+            <span className="text-orange relative inline-block">
+              <img src="/images/savehr-logo.svg" alt="box-icon" className="p-2"/>
             </span>
           </h2>
           <p className="text-gray mb-8 max-w-xl mx-auto text p-4">
