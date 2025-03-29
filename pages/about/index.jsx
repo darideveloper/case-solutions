@@ -1,3 +1,4 @@
+import AboutNav from "@/components/layout/AboutNav";
 import ClientShowcase from "@/components/layout/ClientShowcase";
 import ContactService from "@/components/layout/ContactService";
 import Footer from "@/components/layout/Footer";
@@ -12,6 +13,7 @@ export default function About() {
       <Navbar />
       <Hero title={"Quiénes somos"} image={"/images/hero-about.png"} />
       <QuoteDescription />
+      <AboutNav />
       <ProductShowcase />
       <ProductShowcase imagePosition="right" />
       <ContactService />
