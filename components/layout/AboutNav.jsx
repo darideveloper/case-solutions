@@ -12,18 +12,16 @@ export default function AboutNav() {
   return (
     <div className="min-h-[500px] w-full bg-primary relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-[url('/images/about-wave-bg.png')] bg-no-repeat bg-cover mix-blend-multiply h-full" />
-
+      <div className="absolute inset-0 bg-[url('/images/about-wave-bg.png')] bg-no-repeat bg-cover mix-blend-multiply h-full brightness-80" />
       <div className="flex flex-col md:flex-row py-12 md:py-0 relative z-10">
         {/* Left section (Logo on desktop) */}
         <div className="hidden md:flex w-full md:w-1/2 md:justify-center md:items-center">
           <img
             src="/images/logo.svg"
             alt="Logo"
-            className="h-[400px] w-[400px] opacity-40 grayscale"
+            className="h-[400px] w-[400px] opacity-40 grayscale brightness-50"
           />
         </div>
-
         {/* Right section (Text + Navbar + Logo for mobile) */}
         <div className="w-full md:w-1/2 px-6 md:px-0">
           <div className="flex flex-col justify-center py-6 md:h-[500px] space-y-12">
@@ -37,25 +35,23 @@ export default function AboutNav() {
                 nostra, per inceptos himenaeos.
               </p>
             </div>
-
             {/* Nav + Logo (Mobile only layout) */}
             <div className="flex justify-between items-start md:block">
               {/* Nav links */}
-              <div className="flex flex-col items-start md:flex-row md:items-center">
+              <div className="flex flex-col items-start flex-wrap md:flex-row md:items-center">
                 {navItems.map((item, index) => (
                   <div key={item.id} className="relative flex flex-col">
                     <a
                       href={item.link}
-                      className="text-white font-bold italic text-lg pb-4 md:pb-0 md:px-[30px]"
+                      className="text-white font-bold italic text-xl md:text-lg pb-5 md:pb-0 md:px-[30px]"
                     >
                       {item.title}
                     </a>
-
                     {/* Dividers */}
                     {index < navItems.length - 1 && (
                       <>
                         {/* Mobile: horizontal line */}
-                        <div className="md:hidden h-[1px] w-[50px] bg-white mb-4" />
+                        <div className="md:hidden h-[1px] w-[50px] bg-white mb-5" />
                         {/* Desktop: vertical line */}
                         <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-[50px] w-[1px] bg-white" />
                       </>
@@ -63,13 +59,12 @@ export default function AboutNav() {
                   </div>
                 ))}
               </div>
-
               {/* Logo (Mobile only) */}
               <div className="md:hidden pl-6 pt-2">
                 <img
                   src="/images/logo.svg"
                   alt="Logo"
-                  className="max-h-[200px] max-w-[200px] opacity-40 grayscale"
+                  className="max-h-[200px] max-w-[200px] opacity-40 grayscale brightness-50"
                 />
               </div>
             </div>
