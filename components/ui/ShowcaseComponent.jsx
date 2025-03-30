@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Title from "./Title";
+import ImageEffect from "./ImageEffect";
 
 const ProductShowcase = ({
   imagePosition = "left", // 'left' or 'right'
@@ -19,24 +20,11 @@ const ProductShowcase = ({
         <div className="flex flex-col md:flex-row items-center justify-between gap:8 md:gap-16">
           {/* Image Section - always first on mobile */}
           <div
-            className={`w-full md:w-1/2 relative order-1 ${
+            className={`w-full md:w-1/2 order-1 ${
               isImageOnRight ? "md:order-2" : "md:order-1"
             }`}
           >
-            {/* Offset white background */}
-            <div className="absolute bg-white shadow-lg shadow-gray-light w-full h-full bottom-4 right-4"></div>
-            {/* Image with primary color overlay */}
-            <div className="relative shadow-md">
-              <div className="relative">
-                <img
-                  src={imageSrc}
-                  alt={imageAlt}
-                  className="w-full h-auto object-cover"
-                />
-                {/* Primary color overlay */}
-                <div className="absolute inset-0 bg-primary opacity-80"></div>
-              </div>
-            </div>
+            <ImageEffect imageSrc={imageSrc} imageAlt={imageAlt} />
           </div>
 
           {/* Content Section - always second on mobile */}

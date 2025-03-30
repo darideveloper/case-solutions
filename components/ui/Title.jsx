@@ -3,7 +3,7 @@ function Title({ children, isH1 = false, className = "" }) {
     return <h1 className={` font-bold ${className}  text-4xl `}>{children}</h1>;
   }
   return (
-    <h2 className={`text-3xl font-bold uppercase ${className}`}>{children}</h2>
+    <h2 className={`text-3xl font-bold ${className}`}>{children}</h2>
   );
 }
 

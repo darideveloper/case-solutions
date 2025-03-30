@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 const Accordion = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const accordionData = [
     {
@@ -73,7 +73,6 @@ const Accordion = () => {
             </div>
             {openIndex === index ? <ChevronUp /> : <ChevronDown />}
           </button>
-
           <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${
               openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
@@ -85,11 +84,12 @@ const Accordion = () => {
                   {item.content.map((contentItem, contentIndex) => (
                     <li
                       key={contentIndex}
-                      className="pl-2 border-l-2 border-indigo-500 
+                      className="flex items-start pl-2
                                  transition-all duration-300 
                                  transform hover:translate-x-2"
                     >
-                      {contentItem}
+                      <span className="inline-block w-1 h-1 rounded-full bg-indigo-500 mt-2 mr-2"></span>
+                      <span>{contentItem}</span>
                     </li>
                   ))}
                 </ul>

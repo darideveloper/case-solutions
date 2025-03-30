@@ -14,8 +14,8 @@ export default function Services() {
       <SolutionsOffers />
       <ServiceDropdown />
       <DownloadCard />
-      <ClientShowcase />
       <ContactService />
+      <ClientShowcase />
     </Layout>
   );
 }
