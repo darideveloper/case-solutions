@@ -7,14 +7,16 @@ export default function ContactService() {
       <HoverCard
         title={"Nestros Servicios"}
         className={`bg-[url(/images/service-card.png)]`}
+        href="/services"
       >
         Los productos que vendemos tienen la flexibilidad de adaptarse a las
         necesidades de nuestros clientes.
       </HoverCard>
 
       <HoverCard
-        title={"Nestros Servicios"}
+        title={"Nestros Productos"}
         className={`bg-[url(/images/product-card.png)]`}
+        href="/products"
       >
         Los productos que vendemos tienen la flexibilidad de adaptarse a las
         necesidades de nuestros clientes.
