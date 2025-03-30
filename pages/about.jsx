@@ -15,8 +15,8 @@ export default function About() {
       <Hero title={"Quiénes somos"} image={"/images/hero-about.png"} />
       <QuoteDescription />
       <AboutNav />
-      <ProductShowcase />
-      <ProductShowcase imagePosition="right" />
+      <ProductShowcase imageAlt="Product showcase image" imageSrc="/images/about-showcase-1.png" className="mb-8" />
+      <ProductShowcase imagePosition="right" imageAlt="Product showcase image" imageSrc="/images/about-showcase-2.png" />
       <ContactService />
       <ClientShowcase />
     </Layout>

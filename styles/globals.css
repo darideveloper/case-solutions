@@ -8,7 +8,7 @@
   --geist-accent: #8f092f;
   --geist-white: #ffffff;
   --geist-gray: #585958;
-  --geist-gray-light: #C9C9C9;
+  --geist-gray-light: #c9c9c9;
 }
 
 @theme inline {
@@ -25,7 +25,6 @@
 
   --breakpoint-md: 1024px;
   --brekpoint-lg: 1280px;
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,5 +40,5 @@ body {
 }
 
 .container {
-  max-width: 1350px;
+  padding: 0 30px;
 }

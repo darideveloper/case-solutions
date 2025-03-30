@@ -1,53 +1,64 @@
 import Link from "next/link";
+import Title from "./Title";
 
 const ProductShowcase = ({
   imagePosition = "left", // 'left' or 'right'
   title = "LOREM IPSUM DOLOR",
   subtitle = "NUESTROS PRODUCTOS",
   description = "Los productos que vendemos tienen la flexibilidad de adaptarse a las necesidades de nuestros clientes.",
-  ctaText = "LEER MÁS",
   imageSrc = "/images/showcase-image.png",
   imageAlt = "Product showcase image",
   className = "",
 }) => {
-  // Determine the order of content based on imagePosition
+  // Determine the order of content based on imagePosition (only for desktop)
   const isImageOnRight = imagePosition === "right";
 
   return (
     <div className={`w-full py-12 px-4 sm:px-6 lg:px-8 ${className}`}>
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-16">
-          {/* Content Section */}
-          <div className={`md:w-1/2 ${isImageOnRight ? "order-1" : "order-2"}`}>
-            <div className="max-w-lg">
-              <h3 className="text-indigo-900 font-medium mb-2 uppercase text-sm tracking-wide">
+        <div className="flex flex-col md:flex-row items-center justify-between gap:8 md:gap-16">
+          {/* Image Section - always first on mobile */}
+          <div
+            className={`w-full md:w-1/2 relative order-1 ${
+              isImageOnRight ? "md:order-2" : "md:order-1"
+            }`}
+          >
+            {/* Offset white background */}
+            <div className="absolute bg-white shadow-lg shadow-gray-light w-full h-full bottom-4 right-4"></div>
+            {/* Image with primary color overlay */}
+            <div className="relative shadow-md">
+              <div className="relative">
+                <img
+                  src={imageSrc}
+                  alt={imageAlt}
+                  className="w-full h-auto object-cover"
+                />
+                {/* Primary color overlay */}
+                <div className="absolute inset-0 bg-primary opacity-80"></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Content Section - always second on mobile */}
+          <div
+            className={`w-full md:w-1/2 order-2 ${
+              isImageOnRight ? "md:order-1" : "md:order-2"
+            }`}
+          >
+            <div className="max-w-lg mt-8 md:mt-0">
+              <h3 className="text-indigo-900 font-medium mb-2 uppercase text-sm tracking-wide underline decoration-gray-light decoration-2 underline-offset-4">
                 {subtitle}
               </h3>
-              <h2 className="text-3xl font-bold text-indigo-900 mb-4 uppercase">
+              <Title className="text-3xl font-bold text-primary py-3">
                 {title}
-              </h2>
+              </Title>
               <p className="text-gray-700 mb-6">{description}</p>
               <Link
                 href={"/"}
                 className="text-primary hover:text-secondary hover:font-bold underline hover:decoration-accent font-medium uppercase tracking-wide hover:text-indigo-800 transition-colors"
               >
-                {ctaText}
+                LEER MÁS
               </Link>
-            </div>
-          </div>
-
-          {/* Image Section */}
-          <div
-            className={`md:w-1/2 relative ${
-              isImageOnRight ? "order-2" : "order-1"
-            }`}
-          >
-            <div className="rounded-lg shadow-[15px_-15px_3px_3px_rgba(0,0,0,0.1)] bg-primary">
-              <img
-                src={imageSrc}
-                alt={imageAlt}
-                className="w-full h-auto rounded object-cover opacity-50"
-              />
             </div>
           </div>
         </div>

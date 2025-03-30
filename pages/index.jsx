@@ -18,7 +18,7 @@ export default function Home() {
       <Savehr />
       <SavehrDescripcion />
       <Flipbook />
-      <ProductShowcase />
+      <ProductShowcase imageSrc="/images/home-showcase-1.png"/>
       <WaveBreak />
       <ProductShowcase imagePosition="right" className="mt-[-400px]" />
       <Testimonials />
