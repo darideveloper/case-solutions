@@ -1,3 +1,4 @@
+// ui elements
 import Title from "@/components/ui/Title";
 
 const Footer = () => {

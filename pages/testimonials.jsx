@@ -1,15 +1,14 @@
+// components
 import Companies from "@/components/layout/Companies";
 import ContactService from "@/components/layout/ContactService";
-import Footer from "@/components/layout/Footer";
 import Hero from "@/components/layout/Hero";
 import Hobelmos from "@/components/layout/Hobelmos";
-import Navbar from "@/components/layout/Navbar";
+import Layout from "@/components/layout/Layout";
 import DownloadCard from "@/components/ui/DownloadCard";
 
 export default function Stories() {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <Hero title="Testimonios" image="/images/stories.png" />
       <Hobelmos title={"Somos una empresa orientada al logro de resultados"}>
         y a la satisfacción de las necesidades del cliente que a través del
@@ -19,7 +18,6 @@ export default function Stories() {
       <Companies />
       <DownloadCard />
       <ContactService />
-      <Footer />
-    </div>
+    </Layout>
   );
 }

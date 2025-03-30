@@ -1,14 +1,13 @@
+// components
 import ContactDetails from "@/components/layout/ContactDetails";
 import ContactService from "@/components/layout/ContactService";
-import Footer from "@/components/layout/Footer";
 import Hero from "@/components/layout/Hero";
 import Hobelmos from "@/components/layout/Hobelmos";
-import Navbar from "@/components/layout/Navbar";
+import Layout from "@/components/layout/Layout";
 
 export default function Contact() {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <Hero title="Contactanos" image={"/images/hero-contact.png"} />
       <Hobelmos title={"Contactanos"}>
         Envíenos un correo electrónico a{" "}
@@ -18,7 +17,6 @@ export default function Contact() {
       </Hobelmos>
       <ContactDetails />
       <ContactService />
-      <Footer />
-    </div>
+    </Layout>
   );
 }

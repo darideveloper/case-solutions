@@ -1,4 +1,7 @@
+// libs
 import React from "react";
+
+// ui elements
 import Button from "@/components/ui/Button";
 
 const SavehrDescripcion = ({ className=''}) => {

@@ -1,3 +1,4 @@
+// ui elements
 import { Check } from "lucide-react";
 
 const features = [

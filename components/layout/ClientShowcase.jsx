@@ -1,4 +1,4 @@
-import React from "react";
+// ui components
 import Title from "@/components/ui/Title";
 
 const ClientShowcase = () => {

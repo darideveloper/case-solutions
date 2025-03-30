@@ -1,3 +1,4 @@
+// ui components
 import CompanyCard from "@/components/ui/CompanyCard";
 
 export default function Companies() {

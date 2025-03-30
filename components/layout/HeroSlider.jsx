@@ -1,6 +1,9 @@
 "use client";
+// libs
 import { useState, useEffect } from "react";
 import Image from "next/image";
+
+// ui elements
 import Button from "@/components/ui/Button";
 import Title from "@/components/ui/Title";
 

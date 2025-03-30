@@ -1,3 +1,4 @@
+// ui elements
 import Accordion from "@/components/ui/Accordion";
 
 export default function ServiceDropdown() {
