@@ -31,16 +31,17 @@ function ContactDetails() {
         </div>
       </div>
       <div className="w-full max-w-xl mx-auto">
-        <h1 className="text-primary mb-9 text-xl font-bold italic md:text-[32px]">
+        <h3 className="text-primary mb-9 text-xl font-bold italic md:text-[32px]">
           Formulario
-        </h1>
-        <form action="#" className="flex flex-col items-center gap-y-13">
+        </h3>
+        <form action="#" method="post" className="flex flex-col items-center gap-y-13">
           <div className="flex w-full items-center gap-x-3.5">
             <img src={"/images/icons/contact.svg"} className="h-10 w-10" />
             <input
               type="text"
               placeholder="Nombre Completo*"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
+              required
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
@@ -57,6 +58,7 @@ function ContactDetails() {
               type="email"
               placeholder="Email*"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
+              required
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
@@ -67,6 +69,7 @@ function ContactDetails() {
               name="phone"
               placeholder="Telefpono*"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
+              required
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
@@ -75,9 +78,10 @@ function ContactDetails() {
               type="text"
               placeholder="Mensaje*"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
+              required
             />
           </div>
-          <Button variant="primary">Enviar</Button>
+          <Button variant="primary" type="submit">Enviar</Button>
         </form>
       </div>
     </div>
