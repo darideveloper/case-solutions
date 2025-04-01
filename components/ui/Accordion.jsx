@@ -7,6 +7,7 @@ import {
   Database,
   Download,
 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 const Accordion = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -14,48 +15,84 @@ const Accordion = () => {
   const accordionData = [
     {
       title: "Desarrollo de Sistemas a la Medida",
-      content: [
-        "Plataforma Web, cliente servidor. (Do Net, Java Server Faces, Java ServerL, PHP)",
-        ".NET, JAVA Genexus, WebServices, Conexión ERP SAP, ERP Oracle.",
-        "Base de datos Oracle, SQL Server, MySql, Informix, DB2.",
-        "Genexus: poderosa herramienta para el diseño y desarrollo de software multiplataforma, soporta lenguajes líderes y DBMS más populares.",
-      ],
+      content: `
+- Plataforma Web, cliente servidor. (Do Net, Java Server Faces, Java ServerL, PHP)
+- .NET, JAVA Genexus, WebServices, Conexión ERP SAP, ERP Oracle.
+- Base de datos Oracle, SQL Server, MySql, Informix, DB2.
+- Genexus: poderosa herramienta para el diseño y desarrollo de software multiplataforma, soporta lenguajes líderes y DBMS más populares.
+      `,
       icon: Code,
     },
     {
       title: "Modelado de Proceso (Flow)",
-      content: [
-        "Análisis y diseño de flujos de trabajo empresariales.",
-        "Identificación de procesos clave y puntos de optimización.",
-        "Creación de diagramas de flujo detallados.",
-        "Mejora de la eficiencia operativa mediante modelado preciso.",
-      ],
+      content: `
+- Análisis y diseño de flujos de trabajo empresariales.
+- Identificación de procesos clave y puntos de optimización.
+- Creación de diagramas de flujo detallados.
+- Mejora de la eficiencia operativa mediante modelado preciso.
+      `,
       icon: Workflow,
     },
     {
       title: "Elaboración y Consulta de su Base de Datos Tecnología OLAP",
-      content: [
-        "Implementación de cubos OLAP para análisis multidimensional.",
-        "Consultas complejas y agregaciones de datos.",
-        "Visualización de información empresarial en tiempo real.",
-        "Soporte para toma de decisiones estratégicas.",
-      ],
+      content: `
+- Implementación de cubos OLAP para análisis multidimensional.
+- Consultas complejas y agregaciones de datos.
+- Visualización de información empresarial en tiempo real.
+- Soporte para toma de decisiones estratégicas.
+      `,
       icon: Database,
     },
     {
       title: "Captura y Procesamiento de Datos",
-      content: [
-        "Recolección de datos de múltiples fuentes.",
-        "Limpieza y transformación de datos.",
-        "Integración de sistemas de información.",
-        "Preparación de datos para análisis avanzado.",
-      ],
+      content: `
+- Formas de estudio de mercado
+- Encuestas
+- Formularios
+- Formatos en general
+
+## Ofrece:
+- Calidad de la información procesada
+- Seguridad y confiabilidad
+- Especialistas en sitio
+- Trabajo en instalaciones del cliente o instalaciones de nuestra empresa.
+- Nuestra línea de productos y servicios actuales está enfocada en el desarrollo, creación e implementación de sistemas, captura, elaboración de informes y reportes.
+
+- Captura de Datos: Incluye desarrollo de aplicación para la captura de información, la cual será entregada al cliente al final del proyecto
+      `,
       icon: Download,
     },
   ];
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // Custom components for ReactMarkdown to apply styling
+  const components = {
+    // Style the container for the markdown content
+    div: ({ node, ...props }) => (
+      <div className="prose max-w-none" {...props} />
+    ),
+    // Style the lists
+    ul: ({ node, ...props }) => <ul className="space-y-2 ml-4" {...props} />,
+    // Style the list items
+    li: ({ node, ...props }) => (
+      <li className="flex items-start" {...props}>
+        <span className="inline-block w-1 h-1 rounded-full bg-indigo-500 mt-2 mr-2"></span>
+        <span>{props.children}</span>
+      </li>
+    ),
+    // Style headings if needed
+    h1: ({ node, ...props }) => (
+      <h1 className="text-xl font-bold mb-2" {...props} />
+    ),
+    h2: ({ node, ...props }) => (
+      <h2 className="text-lg font-bold mb-2" {...props} />
+    ),
+    h3: ({ node, ...props }) => (
+      <h3 className="text-md font-bold mb-1" {...props} />
+    ),
   };
 
   return (
@@ -75,24 +112,14 @@ const Accordion = () => {
           </button>
           <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${
-              openIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              openIndex === index ? "opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             {openIndex === index && (
               <div className="p-4 bg-white text-gray-700">
-                <ul className="space-y-2">
-                  {item.content.map((contentItem, contentIndex) => (
-                    <li
-                      key={contentIndex}
-                      className="flex items-start pl-2
-                                 transition-all duration-300 
-                                 transform hover:translate-x-2"
-                    >
-                      <span className="inline-block w-1 h-1 rounded-full bg-indigo-500 mt-2 mr-2"></span>
-                      <span>{contentItem}</span>
-                    </li>
-                  ))}
-                </ul>
+                <ReactMarkdown components={components}>
+                  {item.content}
+                </ReactMarkdown>
               </div>
             )}
           </div>
