@@ -10,15 +10,42 @@ import ClientShowcase from "@/components/layout/ClientShowcase";
 import HeroSlider from "@/components/layout/HeroSlider";
 import Layout from "@/components/layout/Layout";
 
+const features = [
+  {
+    icon: "/images/icons/question.svg",
+    title: "Lorem Ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: "/images/icons/chart.svg",
+    title: "Lorem Ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: "/images/icons/server-gear.svg",
+    title: "Lorem Ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: "/images/icons/award.svg",
+    title: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];
 export default function Home() {
   return (
     <Layout>
       <HeroSlider />
-      <Features />
+      <Features
+        title={`Lorem ipsum dolor`}
+        subtitle={`¿Por qué nosotros?`}
+        features={features}
+      />
       <Savehr />
       <SavehrDescripcion />
       <Flipbook />
-      <ProductShowcase imageSrc="/images/home-showcase-1.png"/>
+      <ProductShowcase imageSrc="/images/home-showcase-1.png" />
       <WaveBreak />
       <ProductShowcase imagePosition="right" className="mt-[-400px]" />
       <Testimonials />
