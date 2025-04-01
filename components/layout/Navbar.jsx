@@ -55,14 +55,14 @@ const Navbar = () => {
           />
         </div>
         <div className={`w-full ${menuOpen ? "block" : "hidden"} md:block`}>
-          <div className="flex flex-col md:flex-row md:justify-between p-4 w-full">
-            <div className="slogan-address flex flex-col md:flex-row md:justify-between w-full p-4">
-              <div className="slogan mb-4 md:mb-0">
-                <h3 className="text-primary font-bold underline underline-offset-6 decoration-2 decoration-gray-light">
+          <div className="flex flex-col md:flex-row md:justify-between p-0 md:p-4 w-full">
+            <div className="slogan-address flex flex-col md:flex-row md:justify-between w-full p-0 md:p-4">
+              <div className="slogan mb-4 md:mb-0 bg-primary md:bg-transparent py-4 md:py-0">
+                <h3 className="px-4 md:px-0 md:p-4 text-white md:text-primary font-bold underline underline-offset-6 decoration-2 decoration-gray-light">
                   La solución tecnológica a la medida de tu negocio
                 </h3>
               </div>
-              <div className="address flex flex-col md:flex-row">
+              <div className="address hidden md:flex flex-col md:flex-row">
                 <div className="flex gap-2 mb-4 md:mb-0">
                   <div className="flex flex-col items-start md:items-end">
                     <p className="text-accent font-bold">
@@ -113,6 +113,49 @@ const Navbar = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+              <div className="md:hidden secondary-logo flex flex-col items-center justify-center py-8">
+                <Image
+                  src="/images/logo.svg"
+                  alt="Logo"
+                  width={100}
+                  height={100}
+                />
+                <div className="address-phone md:hidden">
+                  <div className="address flex md:hidden flex-col gap-2">
+                    <div className="flex gap-2 mb-4 md:mb-0">
+                      <div className="flex flex-col items-start md:items-end ">
+                        <p className="text-accent font-bold">
+                          correo@casesolutions.mx
+                        </p>
+                        <div className="flex items-center gap-2">
+                          <Image
+                            src="/images/icons/mail.png"
+                            alt="Email"
+                            width={22}
+                            height={22}
+                            className="mt-1"
+                          />
+                          <p className="text-accent">Mandar un mensaje</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-start md:items-center">
+                      <p className="text-accent font-bold text-nowrap">
+                        (55) 1107-0478
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src="/images/icons/phone.png"
+                          alt="Phone"
+                          width={22}
+                          height={22}
+                        />
+                        <p className="text-accent">Llámanos</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
