@@ -81,7 +81,14 @@ function ContactDetails() {
               required
             />
           </div>
-          <Button variant="primary" type="submit">Enviar</Button>
+          <Button
+            type="submit"
+            className={`
+              bg-primary
+            `}
+          >
+            Enviar
+          </Button>
         </form>
       </div>
     </div>

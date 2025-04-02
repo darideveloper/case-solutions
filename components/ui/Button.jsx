@@ -29,10 +29,13 @@ export default function Button({
   };
 
   // Choose image based on variant
-  const imageSrc =
-    variant === "primary"
-      ? "/images/box-icon-white.png"
-      : "/images/box-icon.png";
+  const imageSrcs = {
+    "primary": "/images/box-icon-white.png",
+    "secondary": "/images/box-icon.png",
+    "default": "/images/box-icon-white.png",
+  }
+
+  const imageSrc = imageSrcs[variant] || imageSrcs["default"];
 
   // Secondary variant
   if (variant === "secondary") {
