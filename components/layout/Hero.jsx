@@ -11,10 +11,10 @@ export default function Hero({ title, image, className = "" }) {
         backgroundSize: "cover",
       }}
     >
-      <div className="container debug max-w-7xl mx-auto flex relative justify-start items-center h-full">
+      <div className="container max-w-7xl mx-auto flex relative justify-start items-center h-full">
         <Title
           isH1={true}
-          className="text-[40px] font-black text-white uppercase md:text-[60px] py-18 md:p-18 z-10 overflow-hidden"
+          className="text-[40px] font-black text-white uppercase md:text-[60px] py-18 md:p-18 md:pl-0 z-10 overflow-hidden"
         >
           {title}
         </Title>
