@@ -40,5 +40,9 @@ body {
 }
 
 .container {
-  padding: 0 30px;
+  padding: 0 15px;
+}
+
+.debug {
+  border: 1px solid red;
 }
