@@ -11,7 +11,7 @@ const features = [
 export default function SolutionsOffers() {
   return (
     <div className="px-4 py-12 md:px-16 max-w-7xl mx-auto">
-      <h2 className="text-center text-primary font-bold text-lg md:text-xl mb-10 uppercase">
+      <h2 className="text-center text-primary font-bold text-lg md:text-2xl py-12 mb-10 uppercase">
         Consultores especializados en ofrecer soluciones de sistemas:
       </h2>
 
@@ -19,7 +19,7 @@ export default function SolutionsOffers() {
         {features.map((text, index) => (
           <div key={index} className="flex items-start gap-3">
             <Check className="text-red-600 mt-1" size={20} />
-            <p className="text-gray-800">{text}</p>
+            <p className="text-gray">{text}</p>
           </div>
         ))}
       </div>
