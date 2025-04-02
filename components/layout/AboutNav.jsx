@@ -15,11 +15,11 @@ export default function AboutNav() {
       <div className="absolute inset-0 bg-[url('/images/about-wave-bg.png')] bg-no-repeat bg-cover mix-blend-multiply h-full brightness-80" />
       <div className="flex flex-col md:flex-row py-12 md:py-0 relative z-10">
         {/* Left section (Logo on desktop) */}
-        <div className="hidden md:flex w-full md:w-1/2 md:justify-center md:items-center">
+        <div className="hidden md:flex w-full md:w-1/2 md:justify-center md:items-center bg-[#222652]">
           <img
             src="/images/logo.svg"
             alt="Logo"
-            className="h-[400px] w-[400px] opacity-40 grayscale brightness-50"
+            className="h-[400px] w-[400px] opacity-40 brightness-50 mix-blend-color-burn"
           />
         </div>
         {/* Right section (Text + Navbar + Logo for mobile) */}
