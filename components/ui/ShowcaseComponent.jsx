@@ -10,6 +10,7 @@ const ProductShowcase = ({
   imageSrc = "/images/showcase-image.png",
   imageAlt = "Product showcase image",
   className = "",
+  href="",
 }) => {
   // Determine the order of content based on imagePosition (only for desktop)
   const isImageOnRight = imagePosition === "right";
@@ -41,12 +42,17 @@ const ProductShowcase = ({
                 {title}
               </Title>
               <p className="text-gray-700 mb-6">{description}</p>
-              <Link
-                href={"/"}
-                className="text-primary hover:text-secondary hover:font-bold underline hover:decoration-accent font-medium uppercase tracking-wide hover:text-indigo-800 transition-colors"
-              >
-                LEER MÁS
-              </Link>
+
+              {
+                href
+                &&
+                <Link
+                  href={href}
+                  className="text-primary hover:text-secondary hover:font-bold underline hover:decoration-accent font-medium uppercase tracking-wide transition-colors"
+                >
+                  LEER MÁS
+                </Link>
+              }
             </div>
           </div>
         </div>
