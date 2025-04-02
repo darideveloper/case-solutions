@@ -33,6 +33,27 @@ const features = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
+
+const cardInfo1 = {
+  imagePosition: "left", // 'left' or 'right'
+  title: "LOREM IPSUM DOLOR 1",
+  subtitle: "NUESTROS PRODUCTOS",
+  description: "Los productos que vendemos tienen la flexibilidad de adaptarse a las necesidades de nuestros clientes.",
+  imageSrc: "/images/home-showcase-1.png",
+  imageAlt: "Product showcase image",
+  href: "/products",
+}
+
+const cardInfo2 = {
+  imagePosition: "right", // 'left' or 'right'
+  title: "LOREM IPSUM DOLOR 2",
+  subtitle: "NUESTROS PRODUCTOS",
+  description: "Los productos que vendemos tienen la flexibilidad de adaptarse a las necesidades de nuestros clientes.",
+  imageSrc: "/images/showcase-image.png",
+  imageAlt: "Product showcase image",
+  href: "/services",
+}
+
 export default function Home() {
   return (
     <Layout>
@@ -45,9 +66,15 @@ export default function Home() {
       <Savehr />
       <SavehrDescripcion />
       <Flipbook />
-      <ProductShowcase imageSrc="/images/home-showcase-1.png" />
+      <ProductShowcase 
+        {...cardInfo1}
+      />
       <WaveBreak />
-      <ProductShowcase imagePosition="right" className="mt-[-400px]" />
+      <ProductShowcase
+        imagePosition="right"
+        className="mt-[-600px]"
+        {...cardInfo2}
+      />
       <Testimonials />
       <ClientShowcase />
     </Layout>
