@@ -106,7 +106,7 @@ export default function Companies() {
 
   return (
     <div className=" md:max-w-7xl mx-auto p-8 md:p-2 w-full mb-18">
-      <div className="grid grid-cols-1 gap-4 md:grid md:grid-cols-3 md:gap-18">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-18">
         {companies.map((company, index) => (
           <CompanyCard
             key={index}
@@ -114,6 +114,9 @@ export default function Companies() {
             slogan={company.slogan}
             logo={company.logo}
             shortDescription={company.shortDescription}
+            className={`
+              mx-auto
+            `}
           />
         ))}
       </div>
