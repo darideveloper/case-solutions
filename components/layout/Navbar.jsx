@@ -33,7 +33,7 @@ const Navbar = () => {
   }, [router.pathname]);
 
   return (
-    <nav className="max-w-7xl bg-primary mx-auto bg-white">
+    <nav className="max-w-7xl mx-auto bg-white">
       <div className="flex flex-col md:flex-row">
         <div className="relative flex items-center justify-center py-4 px-4 md:justify-start">
           {/* Mobile menu button - moved to left */}
