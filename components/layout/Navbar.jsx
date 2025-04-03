@@ -103,7 +103,7 @@ const Navbar = () => {
               <div className="nav w-full">
                 <ul className="flex flex-col md:flex-row md:justify-between w-full">
                   {links.map((link, index) => (
-                    <li key={index} className="py-2 md:py-0">
+                    <li key={index} className="py-5 md:py-0">
                       <NavLink
                         active={activeLink === link.href}
                         href={link.href}
