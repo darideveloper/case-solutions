@@ -131,7 +131,7 @@ const SavehrDescripcion = ({ className = "" }) => {
                 nostra, per inceptos himenaeos.
               </p>
               <Button variant="primary">
-                Descargar
+                Quiero saber más
               </Button>
             </div>
           </div>
