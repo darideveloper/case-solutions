@@ -9,7 +9,7 @@ import DownloadCard from "@/components/ui/DownloadCard";
 export default function Stories() {
   return (
     <Layout>
-      <Hero title="Testimonios" image="/images/stories.png" />
+      <Hero title="Casos de éxito" image="/images/stories.png" />
       <TestimonialText
         title={"Somos una empresa orientada al logro de resultados"}
         className="text-left md:text-left"
