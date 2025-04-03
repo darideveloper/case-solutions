@@ -7,8 +7,8 @@ const Timeline = ({ className }) => {
   ];
   return (
     <div className={`max-w-7xl mx-auto px-4 md:px-0 py-12 md:py-18 ${className}`}>
-      {/* Horizontal Timeline (md and up) */}
 
+      {/* Horizontal Timeline (md and up) */}
       <div className="hidden md:flex items-start justify-between relative">
         {data.map((item, index) => (
           <div key={index} className="flex flex-col items-center flex-1 px-4 relative">
@@ -26,6 +26,7 @@ const Timeline = ({ className }) => {
           </div>
         ))}
       </div>
+
       {/* Vertical Timeline (mobile) */}
       <div className="md:hidden space-y-8">
         <div className="relative pl-8">
@@ -34,17 +35,19 @@ const Timeline = ({ className }) => {
             height: `calc(100% - ${data.length > 0 ? (data.length - 1) * 8 : 0}px)`
           }}></div>
 
-          {data.map((item, index) => (
-            <div key={index} className="relative mb-8 last:mb-0">
-              <div className="absolute -left-8 top-0 w-8 h-8 bg-white rounded-full z-10 flex items-center justify-center border border-gray-light">
-                <div className="w-4 h-4 bg-primary rounded-full"></div>
+          <div className="items-wrapper flex flex-col gap-12">
+            {data.map((item, index) => (
+              <div key={index} className="relative mb-8 last:mb-0">
+                <div className="absolute -left-8 top-0 w-8 h-8 bg-white rounded-full z-10 flex items-center justify-center border border-gray-light">
+                  <div className="w-4 h-4 bg-primary rounded-full"></div>
+                </div>
+                <div className="ml-4 text-left">
+                  <h3 className="text font-bold text-primary mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray">{item.description}</p>
+                </div>
               </div>
-              <div className="ml-4">
-                <h3 className="text font-bold text-primary mb-2">{item.title}</h3>
-                <p className="text-sm text-gray">{item.description}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
