@@ -28,7 +28,7 @@ const Timeline = ({ className }) => {
       </div>
 
       {/* Vertical Timeline (mobile) */}
-      <div className="md:hidden space-y-8">
+      <div className="md:hidden space-y-8 max-w-md mx-auto">
         <div className="relative pl-8">
           {/* Continuous vertical line */}
           <div className="absolute left-[15px] top-0 w-0.5 bg-gray-light" style={{
