@@ -11,6 +11,12 @@ export default function ServiceDropdown() {
           <ImageEffect
             imageSrc="/images/accordion-bg.png"
             imageAlt="Accordion image"
+            className="hidden md:block"
+          />
+          <ImageEffect
+            imageSrc="/images/accordion-bg-mobile.webp"
+            imageAlt="Accordion image"
+            className="block md:hidden"
           />
         </div>
         <div className="w-full md:w-1/2 lg:w-3/5 relative pt-16 md:pt-12">
