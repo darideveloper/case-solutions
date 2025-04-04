@@ -10,6 +10,12 @@ import Layout from "@/components/layout/Layout";
 import QuoteDescription from "@/components/layout/QuoteDescription";
 import Head from "next/head";
 
+
+const metadata = {
+  title: "Quiénes somos | Case solutions",
+  description: "CASE Solutions: Learn about our results-oriented technology company in Mexico, committed to customer satisfaction. Discover our mission to be a top software developer in Latin America and our vision to empower businesses with innovative software solutions."
+}
+
 const cardInfo1 = {
   imagePosition: "left", // 'left' or 'right'
   title: "LOREM IPSUM DOLOR 1",
@@ -33,7 +39,8 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>Quiénes somos | Case solutions</title>
+        <title>{metadata.title} </title>
+        <meta name="description" content={metadata.description} />
       </Head>
       <Hero title={"Quiénes somos"} image={"/images/hero-about.png"} />
       <QuoteDescription />

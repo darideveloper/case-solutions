@@ -6,11 +6,17 @@ import Hobelmos from "@/components/layout/Hobelmos";
 import Layout from "@/components/layout/Layout";
 import Head from "next/head";
 
+const metadata = {
+  title: "Contactanos | Case solutions",
+  description: "CASE Solutions Contact: Reach out to our team in Mexico City via email at hamaro@casesolutions.com.mx or call (55) 1107-0478 to discuss your project. Visit us at the WTC during our business hours: Monday-Friday 9-18, Saturday 9-13.",
+}
+
 export default function Contact() {
   return (
     <Layout>
       <Head>
-        <title >Contactanos | Case solutions</title>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
       </Head>
       <Hero title="Contactanos" image={"/images/hero-contact.png"} />
       <Hobelmos title={"Hablemos de su projecto"}>

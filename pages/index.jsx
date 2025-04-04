@@ -14,6 +14,12 @@ import Layout from "@/components/layout/Layout";
 import Head from "next/head";
 
 
+const metadata = {
+  title: "::Case solutions::",
+  description: "CASE Solutions: Your technology partner in Mexico. We provide tailored software and consulting solutions to boost your business productivity. Contact us today for personalized attention and innovative products! correo@casesolutions.mx | (55) 1107-0478",
+};
+
+
 const features = [
   {
     icon: "/images/icons/question.svg",
@@ -62,7 +68,8 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Inicio | Case solutions</title>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
       </Head>
       <HeroSlider />
       <Features

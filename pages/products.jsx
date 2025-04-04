@@ -8,6 +8,13 @@ import Savehr from "@/components/layout/Savehr";
 import SavehrDescripcion from "@/components/layout/SavehrDescripcion";
 import Head from "next/head";
 
+
+const metadata = {
+  title: "Productos | Case solutions",
+  description: "CASE Solutions Products: Discover our flexible and adaptable technology solutions in Mexico, including SAVEHR for efficient fuel and maintenance management. Learn how our products can be tailored to meet your specific business needs"
+
+}
+
 const features = [
   {
     icon: "/images/icons/discount.png",
@@ -35,7 +42,8 @@ export default function Products() {
   return (
     <Layout>
       <Head>
-        <title>Productos | Case solutions</title>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
       </Head>
       <Hero title={"Productos"} image="/images/product-hero.png" />
       <Features

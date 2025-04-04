@@ -97,11 +97,12 @@ const Footer = () => {
         <span className="block font-extralight italic md:inline">
           Todos los Derechos Reservados.
         </span>
+        <div className="mt-1 text-sm font-white font-light">
+          Powered by darideveloper team | <a href="mailto:darideveloper@gmail.com" className="hover:underline">darideveloper@gmail.com</a>
+        </div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
-

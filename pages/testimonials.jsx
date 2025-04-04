@@ -7,11 +7,17 @@ import TestimonialText from "@/components/layout/TestimonialText";
 import DownloadCard from "@/components/ui/DownloadCard";
 import Head from "next/head";
 
+const metadata = {
+  title: "Casos de éxito | Case solutions",
+  description: "CASE Solutions Success Stories: Explore our proven track record in Mexico with case studies featuring leading clients like Televisa, Tv Azteca, Bayer, SEMAR, PGJ, Cablemás, and Brinks. Discover how our tailored technology solutions have driven success for both private and government sectors."
+}
+
 export default function Stories() {
   return (
     <Layout>
       <Head>
-        <title>Casos de éxito | Case solutions</title>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
       </Head>
       <Hero title="Testimonios" image="/images/stories.png" />
       <TestimonialText
