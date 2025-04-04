@@ -22,6 +22,7 @@ export default function Hero({ title, image, className = "" }) {
           className="absolute top-1/2 left-0 transform -translate-y-1/2 h-[150px] md:h-[200px] "
           alt="shape"
           src="/images/half-circle-hero.svg"
+          loading="eager"
         />
       </div>
     </div>

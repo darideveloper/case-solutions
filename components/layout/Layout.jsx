@@ -6,8 +6,8 @@ import Head from "next/head";
 
 
 const metadata = {
-  author: "Case Solutions",
-  keywords: "software Mexico, consultoría tecnológica México, soluciones de negocio México, productividad empresarial, administración de recursos, software a medida, consultoría IT México, desarrollo de software México, servicios tecnológicos México"
+  author: "Case Solutions, Dari Devs Team",
+  keywords: "software Mexico, consultoría tecnológica México, soluciones de negocio México, productividad empresarial, administración de recursos, software a medida, consultoría IT México, desarrollo de software México, servicios tecnológicos México, Dari Devs Team"
 }
 export default function Layout({ children, className = "" }) {
   return (
