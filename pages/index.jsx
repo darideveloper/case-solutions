@@ -10,6 +10,16 @@ import ClientShowcase from "@/components/layout/ClientShowcase";
 import HeroSlider from "@/components/layout/HeroSlider";
 import Layout from "@/components/layout/Layout";
 
+// Libs
+import Head from "next/head";
+
+
+const metadata = {
+  title: "::Case solutions::",
+  description: "CASE Solutions: Your technology partner in Mexico. We provide tailored software and consulting solutions to boost your business productivity. Contact us today for personalized attention and innovative products! correo@casesolutions.mx | (55) 1107-0478",
+};
+
+
 const features = [
   {
     icon: "/images/icons/question.svg",
@@ -57,6 +67,10 @@ const cardInfo2 = {
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </Head>
       <HeroSlider />
       <Features
         title={`Lorem ipsum dolor`}
@@ -66,7 +80,7 @@ export default function Home() {
       <Savehr />
       <SavehrDescripcion />
       <Flipbook />
-      <ProductShowcase 
+      <ProductShowcase
         {...cardInfo1}
       />
       <WaveBreak />
