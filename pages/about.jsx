@@ -8,6 +8,7 @@ import ContactService from "@/components/layout/ContactService";
 import Hero from "@/components/layout/Hero";
 import Layout from "@/components/layout/Layout";
 import QuoteDescription from "@/components/layout/QuoteDescription";
+import Head from "next/head";
 
 const cardInfo1 = {
   imagePosition: "left", // 'left' or 'right'
@@ -31,10 +32,13 @@ const cardInfo2 = {
 export default function About() {
   return (
     <Layout>
+      <Head>
+        <title>Quiénes somos | Case solutions</title>
+      </Head>
       <Hero title={"Quiénes somos"} image={"/images/hero-about.png"} />
       <QuoteDescription />
       <AboutNav />
-      <ProductShowcase 
+      <ProductShowcase
         {...cardInfo1}
       />
       <ProductShowcase

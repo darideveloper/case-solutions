@@ -6,6 +6,7 @@ import Hero from "@/components/layout/Hero";
 import Layout from "@/components/layout/Layout";
 import Savehr from "@/components/layout/Savehr";
 import SavehrDescripcion from "@/components/layout/SavehrDescripcion";
+import Head from "next/head";
 
 const features = [
   {
@@ -33,6 +34,9 @@ const features = [
 export default function Products() {
   return (
     <Layout>
+      <Head>
+        <title>Productos | Case solutions</title>
+      </Head>
       <Hero title={"Productos"} image="/images/product-hero.png" />
       <Features
         subtitle={`Los productos que vendemos tienen la flexibilidad de adaptarse a las necesidades de nuestros clientes.`}

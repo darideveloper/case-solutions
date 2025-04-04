@@ -4,10 +4,14 @@ import ContactService from "@/components/layout/ContactService";
 import Hero from "@/components/layout/Hero";
 import Hobelmos from "@/components/layout/Hobelmos";
 import Layout from "@/components/layout/Layout";
+import Head from "next/head";
 
 export default function Contact() {
   return (
     <Layout>
+      <Head>
+        <title >Contactanos | Case solutions</title>
+      </Head>
       <Hero title="Contactanos" image={"/images/hero-contact.png"} />
       <Hobelmos title={"Hablemos de su projecto"}>
         Envíenos un correo electrónico a{" "}

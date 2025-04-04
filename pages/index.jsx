@@ -10,6 +10,10 @@ import ClientShowcase from "@/components/layout/ClientShowcase";
 import HeroSlider from "@/components/layout/HeroSlider";
 import Layout from "@/components/layout/Layout";
 
+// Libs
+import Head from "next/head";
+
+
 const features = [
   {
     icon: "/images/icons/question.svg",
@@ -57,6 +61,9 @@ const cardInfo2 = {
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>Inicio | Case solutions</title>
+      </Head>
       <HeroSlider />
       <Features
         title={`Lorem ipsum dolor`}
@@ -66,7 +73,7 @@ export default function Home() {
       <Savehr />
       <SavehrDescripcion />
       <Flipbook />
-      <ProductShowcase 
+      <ProductShowcase
         {...cardInfo1}
       />
       <WaveBreak />
