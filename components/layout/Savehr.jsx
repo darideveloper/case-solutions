@@ -1,5 +1,5 @@
 // ui elements
-import Button from "@/components/ui/Button";
+import Button from "@/components/ui/Button"
 
 export default function Savehr({ className = "" }) {
   return (
@@ -21,9 +21,11 @@ export default function Savehr({ className = "" }) {
             <img src="/images/savehr-logo.svg" alt="box-icon" className="w-40" />
           </h2>
           <p className="text-gray mb-8 max-w-xl mx-auto text p-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            sagittis tortor ut elit hendrerit, in dictum sem blandit. Proin at
-            placerat turpis. Vivamus ac sapien sed est porttitor rhoncus.
+            Con SAVEHR puedes llevar un control preciso en tiempo real, gestionar mantenimientos preventivos y correctivos, controlar gastos operativos, y conservar un historial detallado de cada vehículo, todo desde una plataforma intuitiva, segura y fácil de usar.
+            <br /><br />
+            Nuestro objetivo es ayudarte a reducir costos operativos, mejorar la eficiencia de tu equipo y tomar decisiones informadas basadas en datos confiables.
+            <br /><br />
+            SAVEHR se adapta a las necesidades de tu negocio, brindándote una herramienta flexible, escalable y fácil de usar.
           </p>
           <Button className="text-primary mr-4" variant="primary">
             Quiero saber más
@@ -33,5 +35,5 @@ export default function Savehr({ className = "" }) {
 
       <span className="block pb-32"></span>
     </section>
-  );
+  )
 }
