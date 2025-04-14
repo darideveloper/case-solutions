@@ -1,9 +1,9 @@
 const Timeline = ({ className }) => {
   const data = [
-    { title: "REDUCIR TIEMPOS DE PROCESO", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-    { title: "ELEVAR EL RENDIMIENTO", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-    { title: "REDUCCIÓN DE COSTOS", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-    { title: "AGILIZACIÓN Y DISPONIBILIDAD DE LA INFORMACIÓN", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    { title: "REDUCIR TIEMPOS DE PROCESO" },
+    { title: "ELEVAR EL RENDIMIENTO" },
+    { title: "REDUCCIÓN DE COSTOS" },
+    { title: "AGILIZACIÓN Y DISPONIBILIDAD DE LA INFORMACIÓN" },
   ];
   return (
     <div className={`max-w-7xl mx-auto px-4 md:px-0 py-12 md:py-18 ${className}`}>
@@ -21,7 +21,6 @@ const Timeline = ({ className }) => {
             </div>
             <div className="text-center">
               <h3 className="text-lg font-bold text-primary mb-2">{item.title}</h3>
-              <p className="text text-gray">{item.description}</p>
             </div>
           </div>
         ))}
@@ -43,7 +42,6 @@ const Timeline = ({ className }) => {
                 </div>
                 <div className="ml-4 text-left">
                   <h3 className="text font-bold text-primary mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray">{item.description}</p>
                 </div>
               </div>
             ))}
