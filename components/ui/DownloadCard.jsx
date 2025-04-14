@@ -30,7 +30,7 @@ const DownloadCard = () => {
           {presentations.map((presentation, index) => (
             <button
               key={index}
-              className="text-primary text-left text-base text-xl"
+              className="text-primary text-left text-xl"
             >
               {presentation}
             </button>

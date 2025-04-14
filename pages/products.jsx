@@ -6,6 +6,7 @@ import Hero from "@/components/layout/Hero";
 import Layout from "@/components/layout/Layout";
 import Savehr from "@/components/layout/Savehr";
 import SavehrDescripcion from "@/components/layout/SavehrDescripcion";
+import DownloadCard from "@/components/ui/DownloadCard"
 import Head from "next/head";
 
 
@@ -52,6 +53,7 @@ export default function Products() {
       />
       <SavehrDescripcion />
       <Savehr />
+      <DownloadCard />
       <ContactService />
       <ClientShowcase />
     </Layout>
