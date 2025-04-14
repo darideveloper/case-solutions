@@ -27,7 +27,7 @@ export default function Savehr({ className = "" }) {
             <br /><br />
             SAVEHR se adapta a las necesidades de tu negocio, brindándote una herramienta flexible, escalable y fácil de usar.
           </p>
-          <Button className="text-primary mr-4" variant="primary">
+          <Button className="text-primary mr-4" variant="primary" href="/contact">
             Quiero saber más
           </Button>
         </div>
