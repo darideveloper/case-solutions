@@ -18,8 +18,8 @@ const metadata = {
 
 const cardInfo1 = {
   imagePosition: "left", // 'left' or 'right'
-  title: "LOREM IPSUM DOLOR 1",
-  subtitle: "NUESTRA MISIÓN",
+  title: "NUESTRA MISIÓN",
+  subtitle: "",
   description: "Posicionarse en el mercado como una de las mejores empresas de desarrollo en México y Latinoamérica mediante la plena satisfacción de los requerimientos de sus clientes, empleando al personal mejor calificado en cuanto a habilidades y conocimientos informáticos.",
   imageSrc: "/images/about-showcase-1.png",
   imageAlt: "Product showcase image",
@@ -27,8 +27,8 @@ const cardInfo1 = {
 
 const cardInfo2 = {
   imagePosition: "right", // 'left' or 'right'
-  title: "LOREM IPSUM DOLOR 2",
-  subtitle: "NUESTRA VISIÓN",
+  title: "NUESTRA VISIÓN",
+  subtitle: "",
   description: "Desarrollar productos de software que permitan a las empresas mejorar sus operaciones y alcanzar sus objetivos, mediante la correcta interpretación de sus necesidades, aplicando metodologías y herramientas de vanguardia.",
   imageSrc: "/images/about-showcase-2.png",
   imageAlt: "Product showcase image",
