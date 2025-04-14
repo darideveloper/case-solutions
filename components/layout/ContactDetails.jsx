@@ -1,7 +1,36 @@
 // ui elements
 import Button from "@/components/ui/Button";
 
+// Hooks
+import { useEffect, useState } from "react";
+
+// Libs
+import Swal from 'sweetalert2'
+
+
 function ContactDetails() {
+
+  const [currentPage, setcurrentPage] = useState("");
+
+  useEffect(() => {
+    // Get currentPage when page loads
+    const currentPage = window.location.href;
+    setcurrentPage(currentPage);
+
+    // Show sweet alert if thanks is in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const thanks = urlParams.get("thanks");
+    if (thanks) {
+      Swal.fire({
+        icon: 'success',
+        title: '¡Gracias por contactarnos!',
+        text: 'Nos pondremos en contacto contigo lo antes posible.',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#2B2F67',
+      });
+    }
+  }, []);
+
   return (
     <div className="container relative p-6 md:p-2 md:max-w-7xl mx-auto flex flex-col gap-x-10 gap-y-32 md:flex-row md:justify-between">
       <div className="text-primary max-w-xl mx-auto">
@@ -34,7 +63,7 @@ function ContactDetails() {
         <h3 className="text-primary mb-9 text-xl font-bold italic md:text-[32px]">
           Formulario
         </h3>
-        <form action="#" method="post" className="flex flex-col items-center gap-y-13">
+        <form action="https://services.darideveloper.com/contact-form/" method="post" className="flex flex-col items-center gap-y-13">
           <div className="flex w-full items-center gap-x-3.5">
             <img src={"/images/icons/contact.svg"} className="h-10 w-10" />
             <input
@@ -42,6 +71,7 @@ function ContactDetails() {
               placeholder="Nombre Completo*"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
               required
+              name="name"
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
@@ -50,6 +80,7 @@ function ContactDetails() {
               type="text"
               placeholder="Empresa"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
+              name="company"
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
@@ -59,15 +90,16 @@ function ContactDetails() {
               placeholder="Email*"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
               required
+              name="email"
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
-            <img src={"/images/icons/whatsapp.svg"} className="h-10 w-10" />
+            <img src={"/images/icons/phone-svg.png"} className="h-10 w-10" />
             <input
               type="tel"
               id="phone"
               name="phone"
-              placeholder="Telefpono*"
+              placeholder="Teléfono*"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
               required
             />
@@ -79,6 +111,7 @@ function ContactDetails() {
               placeholder="Mensaje*"
               className="border-primary text-primary w-full border-b p-2 font-semibold focus:outline-none"
               required
+              name="message"
             />
           </div>
           <Button
@@ -88,7 +121,11 @@ function ContactDetails() {
             `}
           >
             Enviar
-          </Button>
+          </Button>    
+          <input type="hidden" name="user" id="user" value="CaseSolutions"/>
+          <input type="hidden" name="api_key" id="api_key" value="k4SWrMcgb0BiR0wmC3F9Ib2w"/>
+          <input type="hidden" name="subject" id="subject" value="Contacto desde tu web"/>
+          <input type="hidden" name="redirect" id="subject" value={`${currentPage}?thanks=true`}/>
         </form>
       </div>
     </div>
