@@ -29,7 +29,6 @@ export default function Stories() {
         la industria privada como en el gobierno.
       </TestimonialText>
       <Companies />
-      <DownloadCard />
       <ContactService />
     </Layout>
   );
