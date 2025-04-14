@@ -18,8 +18,8 @@ export default function Contact() {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
-      <Hero title="Contactanos" image={"/images/hero-contact.png"} />
-      <Hobelmos title={"Hablemos de su projecto"}>
+      <Hero title="Contáctanos" image={"/images/hero-contact.png"} />
+      <Hobelmos title={"Hablemos de su proyecto"}>
         Envíenos un correo electrónico a{" "}
         <a href="mailto:ktehozol@casesolutions.com.mx" className="font-bold">
           ktehozol@casesolutions.com.mx
