@@ -1,6 +1,7 @@
 // ui elements
 import Title from "@/components/ui/Title";
 
+
 export default function AboutNav() {
   const navItems = [
     { id: 1, title: "Excelencia", link: "#excelencia" },
@@ -41,12 +42,12 @@ export default function AboutNav() {
               <div className="flex flex-col items-start flex-wrap md:flex-row md:items-center">
                 {navItems.map((item, index) => (
                   <div key={item.id} className="relative flex flex-col">
-                    <a
+                    <p
                       href={item.link}
                       className="text-white font-bold italic text-xl md:text-lg pb-5 md:pb-0 md:px-[30px]"
                     >
                       {item.title}
-                    </a>
+                    </p>
                     {/* Dividers */}
                     {index < navItems.length - 1 && (
                       <>
