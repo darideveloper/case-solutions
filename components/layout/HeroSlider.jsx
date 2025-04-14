@@ -24,7 +24,7 @@ const slideData = [
     subtitle:
       "Desarrollamos productos que se adaptan a las necesidades de nuestros clientes.",
     buttonText: "¡Contáctanos hoy mismo!",
-    buttonLink: "/innovation",
+    buttonLink: "/contact",
     imageUrl: "/images/Hero-slide-2.png",
   },
   {
