@@ -1,50 +1,36 @@
 // libs
-import React from "react";
-import Title from "../ui/Title";
-import Button from "../ui/Button";
+import React from "react"
+import Title from "../ui/Title"
+import Button from "../ui/Button"
 
 const SavehrDescripcion = ({ className = "" }) => {
-  const [isVideoPlaying, setIsVideoPlaying] = React.useState(false);
-  const [currentVideo, setCurrentVideo] = React.useState(0);
+  const [currentVideo, setCurrentVideo] = React.useState(0)
 
   // Video data array with IDs and thumbnails
   const videos = [
     {
-      id: "dQw4w9WgXcQ",
-      title: "Video 1",
-      thumbnail: "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      id: "qs-GD-BkzcI",
+      title: "Video",
     },
     {
-      id: "9bZkp7q19f0",
-      title: "Video 2",
-      thumbnail: "https://i.ytimg.com/vi/9bZkp7q19f0/maxresdefault.jpg",
-    },
-    {
-      id: "JGwWNGJdvx8",
+      id: "nFA65dZW7Bw",
       title: "SAVEHR Combustible",
-      thumbnail: "https://i.ytimg.com/vi/JGwWNGJdvx8/maxresdefault.jpg",
     },
     {
-      id: "kJQP7kiw5Fk",
+      id: "xew1OmJSrrs",
       title: "SAVEHR Mantenimiento",
-      thumbnail: "https://i.ytimg.com/vi/kJQP7kiw5Fk/maxresdefault.jpg",
     },
-  ];
-
-  const handleVideoClick = () => {
-    setIsVideoPlaying(true);
-  };
+  ]
 
   const handleButtonClick = (index) => {
-    setCurrentVideo(index);
-    setIsVideoPlaying(false);
-  };
+    setCurrentVideo(index)
+  }
 
   // Button styles from Button.js
   const baseStyles =
-    "inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic group";
-  const primaryStyles = `${baseStyles} bg-primary text-white`;
-  const secondaryStyles = baseStyles;
+    "inline-flex items-center px-6 py-3 rounded-full font-medium transition-colors italic group"
+  const primaryStyles = `${baseStyles} bg-primary text-white`
+  const secondaryStyles = baseStyles
 
   return (
     <section className={`relative bg-white py-12 ${className}`}>
@@ -55,38 +41,25 @@ const SavehrDescripcion = ({ className = "" }) => {
           <div className="w-full flex flex-col">
             {/* YouTube video placeholder */}
             <div className="relative mb-6 p-6 w-full md:max-w-4/5 mx-auto">
-              {isVideoPlaying ? (
-                <iframe
-                  width="560"
-                  height="315"
-                  src={`https://www.youtube.com/embed/${videos[currentVideo].id}?autoplay=1`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              ) : (
-                <button
-                  className="w-full h-full bg-transparent border-none outline-none"
-                  onClick={handleVideoClick}
-                >
-                  <img
-                    src={videos[currentVideo].thumbnail}
-                    alt={`Play ${videos[currentVideo].title}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              )}
+              <iframe
+                width="560"
+                height="315"
+                src={`https://www.youtube.com/embed/${videos[currentVideo].id}?autoplay=1`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
             {/* Navigation buttons - now directly below the video */}
             <div className="flex flex-wrap lg:flex-nowrap gap-2 mt-2 justify-center">
               {videos.map((video, index) => {
-                const isActive = index === currentVideo;
-                const buttonStyles = isActive ? primaryStyles : secondaryStyles;
+                const isActive = index === currentVideo
+                const buttonStyles = isActive ? primaryStyles : secondaryStyles
                 const additionalStyles = isActive
                   ? "text-primary"
-                  : "border border-primary text-primary border-2";
+                  : "border border-primary text-primary border-2"
 
                 return (
                   <button
@@ -109,7 +82,7 @@ const SavehrDescripcion = ({ className = "" }) => {
                       )}
                     </p>
                   </button>
-                );
+                )
               })}
             </div>
           </div>
@@ -131,7 +104,7 @@ const SavehrDescripcion = ({ className = "" }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SavehrDescripcion;
+export default SavehrDescripcion
