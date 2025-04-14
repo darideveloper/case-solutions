@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
             <div className="text-accent mb-11 flex flex-col items-center gap-4 text-sm md:w-md">
               <p className="font-bold text-accent">
-                hamaro@casesolutions.com.mx
+                ktehozol@casesolutions.com.mx
               </p>
               <p className="flex items-center gap-4 text-accent">
                 <img alt="mail" src="/images/icons/mail.svg" />

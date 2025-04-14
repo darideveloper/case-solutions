@@ -66,7 +66,7 @@ const Navbar = () => {
                 <div className="flex gap-2 mb-4 md:mb-0">
                   <div className="flex flex-col items-start md:items-end">
                     <p className="text-accent font-bold">
-                      correo@casesolutions.mx
+                      ktehozol@casesolutions.com.mx
                     </p>
                     <div className="flex items-center gap-2">
                       <Image
@@ -126,7 +126,7 @@ const Navbar = () => {
                     <div className="flex gap-2 mb-4 md:mb-0">
                       <div className="flex flex-col items-start md:items-end ">
                         <p className="text-accent font-bold">
-                          correo@casesolutions.mx
+                          ktehozol@casesolutions.com.mx
                         </p>
                         <div className="flex items-center gap-2">
                           <Image

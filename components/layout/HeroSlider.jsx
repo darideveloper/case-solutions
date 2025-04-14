@@ -81,7 +81,7 @@ export default function HeroSlider() {
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="container mx-auto px-6 md:px-12">
               <div className="max-w-xl">
-                <Title isH1={false} className="uppercase">
+                <Title isH1={false} className="uppercase !text-white">
                   {slide.title}
                 </Title>
                 <p className="text-lg md:text-xl text-white mb-8">

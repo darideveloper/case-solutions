@@ -8,7 +8,7 @@ import Head from "next/head";
 
 const metadata = {
   title: "Contactanos | Case solutions",
-  description: "CASE Solutions Contact: Reach out to our team in Mexico City via email at hamaro@casesolutions.com.mx or call (55) 1107-0478 to discuss your project. Visit us at the WTC during our business hours: Monday-Friday 9-18, Saturday 9-13.",
+  description: "CASE Solutions Contact: Reach out to our team in Mexico City via email at ktehozol@casesolutions.com.mx or call (55) 1107-0478 to discuss your project. Visit us at the WTC during our business hours: Monday-Friday 9-18, Saturday 9-13.",
 }
 
 export default function Contact() {
@@ -21,8 +21,8 @@ export default function Contact() {
       <Hero title="Contactanos" image={"/images/hero-contact.png"} />
       <Hobelmos title={"Hablemos de su projecto"}>
         Envíenos un correo electrónico a{" "}
-        <a href="mailto:hamaro@casesolutions.com.mx" className="font-bold">
-          hamaro@casesolutions.com.mx
+        <a href="mailto:ktehozol@casesolutions.com.mx" className="font-bold">
+          ktehozol@casesolutions.com.mx
         </a>{" "}
         o complete el siguiente formulario y en breve un miembro de nuestro
         equipo se pondrá en contacto con usted,
