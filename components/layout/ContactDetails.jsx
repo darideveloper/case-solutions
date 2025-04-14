@@ -1,5 +1,6 @@
 // ui elements
 import Button from "@/components/ui/Button";
+import Socials from "@/components/ui/Socials";
 
 // Hooks
 import { useEffect, useState } from "react";
@@ -49,7 +50,7 @@ function ContactDetails() {
             </p>
           </div>
         </div>
-        <div>
+        <div className="mb-8">
           <h1 className="mb-4.5 text-xl font-semibold">
             Estamos a sus órdenes de:
           </h1>
@@ -58,6 +59,10 @@ function ContactDetails() {
             <p>Lunes a Viernes de 9:00 a 18:00 Sábado de 9:00 a 13:00</p>
           </div>
         </div>
+
+        {/* Social links */}
+        <Socials />
+
       </div>
       <div className="w-full max-w-xl mx-auto">
         <h3 className="text-primary mb-9 text-xl font-bold italic md:text-[32px]">
