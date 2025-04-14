@@ -1,15 +1,38 @@
 import React from "react";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
+
 
 const DownloadCard = () => {
   const presentations = [
-    "Presentación SAVEHR",
-    "Presentación de Dirección",
-    "Presentación de Catálogos",
-    "Presentación de Llantas",
-    "Presentación de Mantenimiento",
-    "Presentación de Seguridad",
-    "Presentación de Gestoria",
+    {
+      "title": "Presentación de SAVEHR",
+      "file": "savehr"
+    },
+    {
+      "title": "Presentación de Dirección",
+      "file": "direccion"
+    },
+    {
+      "title": "Presentación de Catálogos",
+      "file": "catalogos"
+    },
+    {
+      "title": "Presentación de Llantas",
+      "file": "llantas"
+    },
+    {
+      "title": "Presentación de Mantenimiento",
+      "file": "mantenimiento"
+    },
+    {
+      "title": "Presentación de Seguridad",
+      "file": "seguridad"
+    },
+    {
+      "title": "Presentación de Gestoría",
+      "file": "gestoria"
+    }
   ];
 
   return (
@@ -28,17 +51,19 @@ const DownloadCard = () => {
 
         <div className="grid w-full grid-cols-1 place-items-center gap-1 md:grid-cols-2 lg:place-items-start">
           {presentations.map((presentation, index) => (
-            <button
+            <Link
               key={index}
               className="text-primary text-left text-xl"
+              href={`/presentaciones/${presentation.file}.zip`}
+              target="_blank"
             >
-              {presentation}
-            </button>
+              {presentation.title}
+            </Link>
           ))}
         </div>
 
         <div className="mt-20 mb-40 flex justify-center md:mt-8 md:mb-8">
-          <Button variant="primary">Descargar todas las presentaciones</Button>
+          <Button variant="primary" href="/presentaciones/all.zip" target="_blank">Descargar todas las presentaciones</Button>
         </div>
       </div>
     </div>
