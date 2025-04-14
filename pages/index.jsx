@@ -72,11 +72,11 @@ export default function Home() {
         <meta name="description" content={metadata.description} />
       </Head>
       <HeroSlider />
-      <Features
+      {/* <Features
         title={`Lorem ipsum dolor`}
         subtitle={`¿Por qué nosotros?`}
         features={features}
-      />
+      /> */}
       <Savehr />
       <SavehrDescripcion />
       <Flipbook />

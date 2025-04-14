@@ -47,10 +47,10 @@ export default function Products() {
         <meta name="description" content={metadata.description} />
       </Head>
       <Hero title={"Productos"} image="/images/product-hero.png" />
-      <Features
+      {/* <Features
         subtitle={`Los productos que vendemos tienen la flexibilidad de adaptarse a las necesidades de nuestros clientes.`}
         features={features}
-      />
+      /> */}
       <SavehrDescripcion />
       <Savehr />
       <DownloadCard />
