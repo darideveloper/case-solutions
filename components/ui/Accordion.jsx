@@ -46,19 +46,19 @@ const Accordion = () => {
     {
       title: "Captura y Procesamiento de Datos",
       content: `
-- Formas de estudio de mercado
-- Encuestas
-- Formularios
-- Formatos en general
+- Diseño de encuestas y formularios digitales. 
+- Desarrollo de herramientas personalizadas para la recolección de datos.
+- Procesamiento de la información.
+- Captura profesional de datos, respaldada por software propio.
 
-## Ofrece:
-- Calidad de la información procesada
-- Seguridad y confiabilidad
-- Especialistas en sitio
-- Trabajo en instalaciones del cliente o instalaciones de nuestra empresa.
-- Nuestra línea de productos y servicios actuales está enfocada en el desarrollo, creación e implementación de sistemas, captura, elaboración de informes y reportes.
+### Ventajas que ofrecemos:
+- Alta calidad en la información procesada: Precisión y confiabilidad en cada dato.
+- Seguridad y confidencialidad: Manejamos tus datos con total responsabilidad.
+- Equipo especializado en sitio: Profesionales capacitados en campo y en nuestras instalaciones.
+- Flexibilidad operativa: Trabajamos en tus instalaciones o en las nuestras, según tus necesidades.
 
-- Captura de Datos: Incluye desarrollo de aplicación para la captura de información, la cual será entregada al cliente al final del proyecto
+
+Al finalizar cada proyecto, entregamos la aplicación desarrollada para la captura de datos, asegurando que el cliente cuente con una herramienta funcional y reutilizable.
       `,
       icon: Download,
     },
@@ -91,7 +91,10 @@ const Accordion = () => {
       <h2 className="text-lg font-bold mb-2" {...props} />
     ),
     h3: ({ node, ...props }) => (
-      <h3 className="text-md font-bold mb-1" {...props} />
+      <h3 className="text-md font-bold mb-1 my-4" {...props} />
+    ),
+    p: ({ node, ...props }) => (
+      <p className="my-4" {...props} />
     ),
   };
 
