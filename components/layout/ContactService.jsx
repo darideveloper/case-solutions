@@ -5,7 +5,7 @@ export default function ContactService() {
   return (
     <div className="container max-w-7xl mx-auto mt-35 flex flex-col gap-y-5.5 md:flex-row md:gap-x-5">
       <HoverCard
-        title={"Nestros Servicios"}
+        title={"NUESTROS Servicios"}
         className={`bg-[url(/images/service-card.png)]`}
         href="/services"
       >
@@ -14,7 +14,7 @@ export default function ContactService() {
       </HoverCard>
 
       <HoverCard
-        title={"Nestros Productos"}
+        title={"NUESTROS Productos"}
         className={`bg-[url(/images/product-card.png)]`}
         href="/products"
       >
