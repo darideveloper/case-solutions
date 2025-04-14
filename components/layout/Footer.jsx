@@ -24,7 +24,7 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className="max-container w-full p-8 md:max-w-7xl mx-auto mt-12 flex items-start gap-11">
+      <div className="container w-full p-8 md:max-w-7xl mx-auto mt-12 flex items-start gap-11">
         <div className="hidden py-6 md:block md:w-2/12">
           <img alt="logo" className="w-31" src="/images/logo.svg" />
         </div>
