@@ -1,23 +1,7 @@
 // ui elements
 import Title from "@/components/ui/Title";
-import Link from "next/link";
-import Image from "next/image";
+import Socials from "@/components/ui/Socials";
 
-
-const socials = [
-  {
-    "link": "https://wa.me/message/EPV5DCXTRF65E1",
-    "icon": "/images/icons/whatsapp.svg",
-  },
-  {
-    "link": "https://www.facebook.com/share/1ADTQfDSw2/ ",
-    "icon": "/images/icons/facebook.svg",
-  },
-  {
-    "link": "https://x.com/CASESOLUTIONSC1?t=0T3gwTXlRvh01HFVsm1HYw&s=09 ",
-    "icon": "/images/icons/twitterx.svg",
-  },
-]
 
 const Footer = () => {
   return (
@@ -73,24 +57,10 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center gap-4 md:justify-start">
-                {
-                  socials.map((social, index) => (
-                    <Link
-                      key={index}
-                      href={social.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`
-                        duration-300
-                        hover:opacity-80
-                      `}
-                    >
-                      <Image alt="whatsapp" src={social.icon} width={30} height={30} />
-                    </Link>
-                  ))
-                }
-              </div>
+
+              {/* Socials icons */}
+              <Socials />
+
             </div>
             <div className="my-2 flex justify-center md:hidden">
               <img alt="logo" className="h-auto w-31" src="/images/logo.svg" />
