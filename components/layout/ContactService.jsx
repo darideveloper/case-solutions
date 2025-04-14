@@ -9,8 +9,7 @@ export default function ContactService() {
         className={`bg-[url(/images/service-card.png)]`}
         href="/services"
       >
-        Los productos que vendemos tienen la flexibilidad de adaptarse a las
-        necesidades de nuestros clientes.
+        Los productos que vendemos tienen la flexibilidad de adaptarse a las necesidades de nuestros clientes.
       </HoverCard>
 
       <HoverCard
@@ -18,8 +17,7 @@ export default function ContactService() {
         className={`bg-[url(/images/product-card.png)]`}
         href="/products"
       >
-        Los productos que vendemos tienen la flexibilidad de adaptarse a las
-        necesidades de nuestros clientes.
+        Consultores especializados en ofrecer soluciones de sistemas que le permitan incrementar su productividad y tomar mejores decisiones en su negocio.
       </HoverCard>
     </div>
   );
