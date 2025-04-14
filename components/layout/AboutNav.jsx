@@ -27,12 +27,12 @@ export default function AboutNav() {
           <div className="flex flex-col justify-center py-6 md:h-[500px] space-y-12">
             {/* Text content */}
             <div className="space-y-12">
-              <Title>Acerca de nosotros</Title>
-              <p className="text-white w-full md:w-3/4 lg:w-1/2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet odio mattis.
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos.
+              <Title className="!text-white">Acerca de nosotros</Title>
+              <p className="text-white w-full md:w-3/4">
+              Somos un equipo de consultores especializados en tecnología y sistemas, comprometidos con ofrecer soluciones eficientes, personalizadas y seguras para el desarrollo de sus proyectos.
+              <br />
+              <br />
+              Contamos con una sólida experiencia en la creación e implementación de herramientas tecnológicas para la recolección, procesamiento y análisis de información, así como en el diseño de sistemas a la medida que responden a las necesidades específicas de cada cliente.
               </p>
             </div>
             {/* Nav + Logo (Mobile only layout) */}
