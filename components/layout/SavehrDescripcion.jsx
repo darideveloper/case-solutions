@@ -1,7 +1,6 @@
 // libs
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import Title from "../ui/Title";
 import Button from "../ui/Button";
 
 const SavehrDescripcion = ({ className = "" }) => {
@@ -118,19 +117,13 @@ const SavehrDescripcion = ({ className = "" }) => {
           {/* Right Column - Text Section */}
           <div className="w-full md:max-w-md mt-8 md:mt-16">
             <div>
-              <h2 className="text-lg font-bold text-blue-900 uppercase underline mb-4 decoration-2 decoration-gray-light underline-offset-8">
-                Lorem ipsum dolor sit
-              </h2>
-              <h1 className="text-4xl font-bold text-orange-500 mb-4">
+              <Title className="text-4xl font-bold text-orange-500 mb-4">
                 SAVEHR
-              </h1>
+              </Title>
               <p className="text-gray-700 text-sm mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet odio mattis.
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos.
+                <strong>SAVEHR</strong> es un software para gestionar y monitorear la flota vehicular de su empresa, brindando visibilidad completa sobre cada unidad: mantenimiento, costos, disponibilidad, y más.
               </p>
-              <Button variant="primary">
+              <Button variant="primary" href="/contact">
                 Quiero saber más
               </Button>
             </div>
