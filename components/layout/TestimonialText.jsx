@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Title from "@/components/ui/Title";
 
 function TestimonialText({ title, children, className = "" }) {
