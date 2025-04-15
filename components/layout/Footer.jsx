@@ -3,6 +3,9 @@ import Title from "@/components/ui/Title";
 import Socials from "@/components/ui/Socials";
 
 
+//libs
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <footer className="mt-10 max-w-full overflow-hidden">
@@ -17,7 +20,9 @@ const Footer = () => {
             </Title>
             <div className="mt-2 h-[1px] w-full bg-gradient-to-r from-white to-transparent" />
           </div>
-          <img
+          <Image
+            height={125}
+            width={150}
             className="absolute top-0 -right-18 md:-top-12"
             alt="shape"
             src="/images/icons/half-circle.svg"
@@ -26,7 +31,7 @@ const Footer = () => {
       </div>
       <div className="container w-full p-8 md:max-w-7xl mx-auto mt-12 flex items-start gap-11">
         <div className="hidden py-6 md:block md:w-2/12">
-          <img alt="logo" className="w-31" src="/images/logo.svg" />
+          <Image height={100} width={100} alt="logo" className="w-31" src="/images/logo.svg" />
         </div>
         <div className="md:w-10/12">
           <Title
@@ -43,7 +48,7 @@ const Footer = () => {
                     Estamos a sus órdenes de:
                   </p>
                   <p className="flex items-center gap-4">
-                    <img alt="clock" src="/images/icons/hours-clock.svg" />
+                    <Image height={40} width={40} alt="clock" src="/images/icons/hours-clock.svg" />
                     Lunes a Viernes de 9:00 a 18:00 Sábado de 9:00 a 13:00
                   </p>
                 </div>
@@ -51,7 +56,7 @@ const Footer = () => {
                 <div className="text-primary text-sm">
                   <p className="mb-2 font-semibold">WTC - World Trade Center</p>
                   <p className="flex items-center gap-4">
-                    <img alt="location" src="/images/icons/location-glob.svg" />
+                    <Image width={40} height={40} alt="location" src="/images/icons/location-glob.svg" />
                     Montecito 38 piso 28 Oficina 12, Colonia Nápoles, C.P.
                     03810, Delegación Benito Juárez, México, D.F
                   </p>
@@ -63,21 +68,21 @@ const Footer = () => {
 
             </div>
             <div className="my-2 flex justify-center md:hidden">
-              <img alt="logo" className="h-auto w-31" src="/images/logo.svg" />
+              <Image height={40} width={40} alt="logo" className="h-auto w-31" src="/images/logo.svg" />
             </div>
             <div className="text-accent mb-11 flex flex-col items-center gap-4 text-sm md:w-md">
               <p className="font-bold text-accent">
                 ktehozol@casesolutions.com.mx
               </p>
               <p className="flex items-center gap-4 text-accent">
-                <img alt="mail" src="/images/icons/mail.svg" />
+                <Image width={30} height={30} alt="mail" src="/images/icons/mail.svg" />
                 Escríbenos por correo
               </p>
               <div className="flex gap-5.5">
                 <div className="text-center">
                   <p className="font-bold text-accent">(55) 1107-0478</p>
                   <p className="mt-3 flex items-center text-accent gap-4">
-                    <img alt="phoneRed" src="/images/icons/phone-footer.svg" />
+                    <Image width={25} height={25} alt="phoneRed" src="/images/icons/phone-footer.svg" />
                     Llámanos
                   </p>
                 </div>
@@ -85,7 +90,7 @@ const Footer = () => {
                 <div className="text-center">
                   <p className="font-bold text-accent">(55) 1107-0478</p>
                   <p className="mt-3 flex items-center text-accent gap-4">
-                    <img alt="" src="/images/icons/fax.svg" />
+                    <Image width={25} height={25} alt="" src="/images/icons/fax.svg" />
                     Llámanos
                   </p>
                 </div>

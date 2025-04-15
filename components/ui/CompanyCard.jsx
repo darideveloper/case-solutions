@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ({
   name,
   slogan,
@@ -9,7 +11,7 @@ export default function ({
     <div className={`text-center max-w-xl ${className}`}>
       <div className="flex justify-center items-center mb-4">
         <div className="max-w-xl h-48 flex items-center justify-center">
-          <img src={logo} className="justify-center mx-auto" />
+          <Image width={100} height={100} src={logo} className="justify-center mx-auto w-full" />
         </div>
       </div>
       <div className="text-center">

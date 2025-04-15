@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const DownloadCard = () => {
@@ -38,7 +39,9 @@ const DownloadCard = () => {
   return (
     <div className="relative mx-auto mt-38 flex w-11/12 md:max-w-7xl flex-col-reverse bg-white shadow-lg shadow-gray md:flex-row lg:flex-row">
       <div className="absolute bottom-0 left-0 w-full md:relative lg:w-1/2">
-        <img
+        <Image
+          width={640}
+          height={350}
           src={`/images/download-card-bg.png`}
           alt="Background"
           className="h-full w-full rounded-l-lg object-cover"

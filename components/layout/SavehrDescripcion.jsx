@@ -42,7 +42,7 @@ const SavehrDescripcion = ({ className = "" }) => {
             {/* YouTube video placeholder */}
             <div className="relative mb-6 p-6 w-full md:max-w-4/5 mx-auto">
               <iframe
-                width="560"
+                width="100%"
                 height="315"
                 src={`https://www.youtube.com/embed/${videos[currentVideo].id}?autoplay=1`}
                 title="YouTube video player"

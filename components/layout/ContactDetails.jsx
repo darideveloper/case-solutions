@@ -1,6 +1,7 @@
 // ui elements
 import Button from "@/components/ui/Button";
 import Socials from "@/components/ui/Socials";
+import Image from "next/image";
 
 // Hooks
 import { useEffect, useState } from "react";
@@ -43,7 +44,7 @@ function ContactDetails() {
             WTC - World Trade Center
           </h1>
           <div className="flex items-center gap-x-8">
-            <img src={"/images/icons/location-glob.svg"} />
+            <Image width={40} height={40} src={"/images/icons/location-glob.svg"} />
             <p>
               Montecito 38 piso 28 Oficina 12 Colonia Nápoles , C.P. 03810.
               Delegación Benito Juárez México, CDMX.
@@ -55,7 +56,7 @@ function ContactDetails() {
             Estamos a sus órdenes de:
           </h1>
           <div className="flex items-center gap-x-8">
-            <img src={"/images/icons/hours-clock.svg"} />
+            <Image width={40} height={40} src={"/images/icons/hours-clock.svg"} />
             <p>Lunes a Viernes de 9:00 a 18:00 Sábado de 9:00 a 13:00</p>
           </div>
         </div>
@@ -70,7 +71,7 @@ function ContactDetails() {
         </h3>
         <form action="https://services.darideveloper.com/contact-form/" method="post" className="flex flex-col items-center gap-y-13">
           <div className="flex w-full items-center gap-x-3.5">
-            <img src={"/images/icons/contact.svg"} className="h-10 w-10" />
+            <Image height={40} width={40} src={"/images/icons/contact.svg"} className="h-10 w-10" />
             <input
               type="text"
               placeholder="Nombre Completo*"
@@ -80,7 +81,7 @@ function ContactDetails() {
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
-            <img src={"/images/icons/message-glob.svg"} className="h-10 w-10" />
+            <Image width={40} height={40} src={"/images/icons/message-glob.svg"} className="h-10 w-10" />
             <input
               type="text"
               placeholder="Empresa"
@@ -89,7 +90,7 @@ function ContactDetails() {
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
-            <img src={"/images/icons/email.svg"} className="h-10 w-10" />
+            <Image width={40} height={40} src={"/images/icons/email.svg"} className="h-10 w-10" />
             <input
               type="email"
               placeholder="Email*"
@@ -99,7 +100,7 @@ function ContactDetails() {
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
-            <img src={"/images/icons/phone-svg.png"} className="h-10 w-10" />
+            <Image width={40} height={40} src={"/images/icons/phone-svg.png"} className="h-10 w-10" />
             <input
               type="tel"
               id="phone"
@@ -110,7 +111,7 @@ function ContactDetails() {
             />
           </div>
           <div className="flex w-full items-center gap-x-3.5">
-            <img src={"/images/icons/message.svg"} className="h-10 w-10" />
+            <Image width={40} height={40} src={"/images/icons/message.svg"} className="h-10 w-10" />
             <input
               type="text"
               placeholder="Mensaje*"

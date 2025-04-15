@@ -2,6 +2,9 @@
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import Title from "@/components/ui/Title";
 
+//libs
+import Image from 'next/image'
+
 const data = [
   {
     title: "SECRETARÍA DE MARINA",
@@ -51,7 +54,7 @@ const Introduction = () => {
 export default function Testimonials() {
   return (
     <section className="relative overflow-hidden bg-primary my-12 w-full p-4 md:p-8 lg:p-12 md:my-20">
-      <img src="/images/bg-curve-3.png" alt="" className="w-full absolute inset-0 top-0 opacity-100 mix-blend-multiply" />
+       <Image width={1000} height={1000} src="/images/bg-curve-3.png" alt="" className="w-full absolute inset-0 top-0 opacity-100 mix-blend-multiply" /> 
       <div className="max-w-7xl mx-auto py-12  md:py-20 ">
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-y-24">
           <div className="w-full md:w-auto flex justify-center">

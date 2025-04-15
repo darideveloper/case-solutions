@@ -1,6 +1,9 @@
 // ui components
 import Title from "@/components/ui/Title";
 
+//libs
+import Image from "next/image"
+
 const ClientShowcase = () => {
   const clients = [
     {
@@ -51,10 +54,11 @@ const ClientShowcase = () => {
               key={index}
               className="flex items-center justify-center h-20 w-32"
             >
-              <img
-                src={client.logo}
+              <Image
+                src={client.logo} 
                 alt={client.alt}
-                loading="lazy"
+                width={200}
+                height={200}
                 className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
               />
             </div>

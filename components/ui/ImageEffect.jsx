@@ -1,4 +1,7 @@
-import React from "react";
+
+//libs
+import Image from "next/image";
+
 
 const ImageEffect = ({ imageSrc, imageAlt, className = "" }) => {
   return (
@@ -8,9 +11,11 @@ const ImageEffect = ({ imageSrc, imageAlt, className = "" }) => {
       {/* Image with primary color overlay */}
       <div className="relative shadow-md">
         <div className="relative">
-          <img
+          <Image
             src={imageSrc}
             alt={imageAlt}
+            width={600}
+            height={350}
             className="w-full h-auto object-cover"
           />
           {/* Primary color overlay */}

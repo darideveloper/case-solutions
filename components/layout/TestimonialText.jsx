@@ -14,7 +14,9 @@ function TestimonialText({ title, children, className = "" }) {
           <p className="text-primary max-w-5xl pe-24 md:pe-0 lg:text-2xl">
             {children}
           </p>
-          <img
+          <Image
+            height={400}
+            width={400}
             src={`/images/icons/half-circle.svg`}
             className="absolute top-0 right-0 md:-top-30 lfet-20 md:w-[400px] md:h-[400px]  grayscale opacity-30"
             alt=""

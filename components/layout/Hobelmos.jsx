@@ -1,4 +1,5 @@
 import Title from "@/components/ui/Title";
+import Image from "next/image";
 
 function Hobelmos({ title, children, className = "" }) {
   return (
@@ -16,7 +17,9 @@ function Hobelmos({ title, children, className = "" }) {
           <p className="text-primary mt-4 max-w-3xl mx-auto pe-24 md:pe-0 md:text-center lg:text-2xl">
             {children}
           </p>
-          <img
+          <Image
+            height={400}
+            width={400}
             src={`/images/icons/half-circle.svg`}
             className="absolute top-0 right-0 md:-top-34 lfet-20 md:w-[400px] md:h-[400px]  grayscale opacity-30"
             alt=""

@@ -1,5 +1,6 @@
 // ui elements
 import Button from "@/components/ui/Button"
+import Image from "next/image"
 
 export default function Savehr({ className = "" }) {
   return (
@@ -18,7 +19,7 @@ export default function Savehr({ className = "" }) {
             <span className="inline-block">
               Administre su flota vehicular con
             </span>
-            <img src="/images/savehr-logo.svg" alt="box-icon" className="w-40" />
+            <Image width={100} height={100} src="/images/savehr-logo.svg" alt="box-icon" className="w-40" />
           </h2>
           <p className="text-gray mb-8 max-w-xl mx-auto text p-4">
             Con SAVEHR puedes llevar un control preciso en tiempo real, gestionar mantenimientos preventivos y correctivos, controlar gastos operativos, y conservar un historial detallado de cada vehículo, todo desde una plataforma intuitiva, segura y fácil de usar.

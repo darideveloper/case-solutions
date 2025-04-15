@@ -1,5 +1,6 @@
 // ui elements
 import Title from "@/components/ui/Title";
+import Image from "next/image";
 
 
 export default function AboutNav() {
@@ -17,7 +18,9 @@ export default function AboutNav() {
       <div className="flex flex-col md:flex-row py-12 md:py-0 relative z-10">
         {/* Left section (Logo on desktop) */}
         <div className="hidden md:flex w-full md:w-1/2 md:justify-center md:items-center bg-[#222652]">
-          <img
+          <Image
+            width={400}
+            height={400}
             src="/images/logo.svg"
             alt="Logo"
             className="h-[400px] w-[400px] opacity-40 brightness-50 mix-blend-color-burn"
@@ -62,8 +65,10 @@ export default function AboutNav() {
               </div>
               {/* Logo (Mobile only) */}
               <div className="md:hidden pl-6 pt-2">
-                <img
+                <Image
                   src="/images/logo.svg"
+                  width={200}
+                  height={200}
                   alt="Logo"
                   className="max-h-[200px] max-w-[200px] opacity-40 grayscale brightness-50"
                 />

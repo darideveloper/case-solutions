@@ -1,5 +1,6 @@
 // ui elements
 import Title from "@/components/ui/Title";
+import Image from "next/image";
 
 export default function Hero({ title, image, className = "" }) {
   return (
@@ -18,7 +19,9 @@ export default function Hero({ title, image, className = "" }) {
         >
           {title}
         </Title>
-        <img
+        <Image
+          height={200}
+          width={200}
           className="absolute top-1/2 left-0 transform -translate-y-1/2 h-[150px] md:h-[200px] "
           alt="shape"
           src="/images/half-circle-hero.svg"
