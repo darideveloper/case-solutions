@@ -1,13 +1,13 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
+"use client"
+import Image from "next/image"
+import { useState } from "react"
 
-export default function TestimonialCard({title, subtitle, className = "" }) {
-  const [open, setOpen] = useState(false);
-  
+export default function TestimonialCard({ title, subtitle = "", className = "" }) {
+  const [open, setOpen] = useState(false)
+
   return (
     <div
-      className={`relative w-full h-full p-8 border-2 border-gray-light rounded-lg transition-opacity duration-300 cursor-pointer opacity-60 hover:opacity-100 ${className}`}
+      className={`relative w-full h-full p-8 border-2 border-gray-light rounded-lg transition-opacity duration-300 opacity-60 hover:opacity-100 ${className}`}
       onClick={() => setOpen(!open)}
     >
       <Image
@@ -21,10 +21,14 @@ export default function TestimonialCard({title, subtitle, className = "" }) {
         <div className="title">
           <h2 className="text-lg font-medium">{title}</h2>
         </div>
-        <div className={`mt-4 ${open ? "" : "hidden"}`}>
-          <p>{subtitle}</p>
-        </div>
+        {
+          subtitle
+          &&
+          <div className={`mt-4 ${open ? "" : "hidden"}`}>
+            <p>{subtitle}</p>
+          </div>
+        }
       </div>
     </div>
-  );
+  )
 }
