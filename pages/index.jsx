@@ -56,7 +56,7 @@ const cardInfo1 = {
 
 const cardInfo2 = {
   imagePosition: "right", // 'left' or 'right'
-  title: "NUESTROS PRODUCTOS",
+  title: "NUESTROS SERVICIOS",
   subtitle: "",
   description: "Consultores especializados en ofrecer soluciones de sistemas que le permitan incrementar su productividad y tomar mejores decisiones en su negocio.",
   imageSrc: "/images/showcase-image.png",
