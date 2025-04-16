@@ -86,14 +86,6 @@ const Footer = () => {
                     Llámanos
                   </p>
                 </div>
-                <div className="bg-accent w-0.5" />
-                <div className="text-center">
-                  <p className="font-bold text-accent">(55) 1107-0478</p>
-                  <p className="mt-3 flex items-center text-accent gap-4">
-                    <Image width={25} height={25} alt="" src="/images/icons/fax.svg" />
-                    Llámanos
-                  </p>
-                </div>
               </div>
             </div>
           </div>
