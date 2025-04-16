@@ -8,7 +8,7 @@ export default function Flipbook() {
       <TitleText />
       <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=z1nl71r02v" className="mb-12" width="100%" height="680" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
       <div className="flex justify-center">
-        <Button className="text-primary mr-4" variant="primary">
+        <Button className="text-primary mr-4" variant="primary" href="/contact">
           Quiero saber más
         </Button>
       </div>
