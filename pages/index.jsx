@@ -46,8 +46,8 @@ const features = [
 
 const cardInfo1 = {
   imagePosition: "left", // 'left' or 'right'
-  title: "LOREM IPSUM DOLOR 1",
-  subtitle: "NUESTROS PRODUCTOS",
+  title: "NUESTROS PRODUCTOS",
+  subtitle: "",
   description: "Los productos que vendemos tienen la flexibilidad de adaptarse a las necesidades de nuestros clientes.",
   imageSrc: "/images/home-showcase-1.png",
   imageAlt: "Product showcase image",
@@ -56,9 +56,9 @@ const cardInfo1 = {
 
 const cardInfo2 = {
   imagePosition: "right", // 'left' or 'right'
-  title: "LOREM IPSUM DOLOR 2",
-  subtitle: "NUESTROS PRODUCTOS",
-  description: "Los productos que vendemos tienen la flexibilidad de adaptarse a las necesidades de nuestros clientes.",
+  title: "NUESTROS PRODUCTOS",
+  subtitle: "",
+  description: "Consultores especializados en ofrecer soluciones de sistemas que le permitan incrementar su productividad y tomar mejores decisiones en su negocio.",
   imageSrc: "/images/showcase-image.png",
   imageAlt: "Product showcase image",
   href: "/services",
